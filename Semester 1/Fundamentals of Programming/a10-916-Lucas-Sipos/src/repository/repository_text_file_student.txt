@@ -1,3 +1,0 @@
-Student,1,Cheryl
-Student,2,Pace
-Student,3,Larry
