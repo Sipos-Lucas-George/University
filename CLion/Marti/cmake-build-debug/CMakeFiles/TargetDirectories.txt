@@ -1,5 +1,0 @@
-D:/CLion/Marti/cmake-build-debug/CMakeFiles/Marti.dir
-D:/CLion/Marti/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/CLion/Marti/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/CLion/Marti/cmake-build-debug/CMakeFiles/Marti_autogen_timestamp_deps.dir
-D:/CLion/Marti/cmake-build-debug/CMakeFiles/Marti_autogen.dir

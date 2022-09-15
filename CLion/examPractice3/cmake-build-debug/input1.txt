@@ -1,3 +1,0 @@
-Lucas,1
-Sicoe,2
-Andrei,3

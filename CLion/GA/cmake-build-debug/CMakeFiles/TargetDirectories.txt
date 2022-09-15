@@ -1,3 +1,0 @@
-D:/CLion/GA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/CLion/GA/cmake-build-debug/CMakeFiles/GA.dir
-D:/CLion/GA/cmake-build-debug/CMakeFiles/edit_cache.dir

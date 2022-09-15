@@ -1,8 +1,0 @@
-# ninja log v5
-31	627	6732227134460788	CMakeFiles/Practice.dir/Buildings.cpp.obj	7d0ce1fa51c3526
-27	638	6732227134520813	CMakeFiles/Practice.dir/Block.cpp.obj	b0e6bbf00b5cadd5
-4	518	6732779394577099	CMakeFiles/Practice.dir/House.cpp.obj	289942c8502163e6
-22	627	6732834653444832	CMakeFiles/Practice.dir/Service.cpp.obj	b8b226ce8f5b17ef
-2	653	6732834653674844	CMakeFiles/Practice.dir/main.cpp.obj	7a95c5c950a2a3e4
-3	455	6732835552904923	CMakeFiles/Practice.dir/UI.cpp.obj	7d4a6796c562a597
-456	655	6732835554852765	Practice.exe	15413543028373ba
