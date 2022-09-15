@@ -1,4 +1,4 @@
-# University Projeccts
+# University Projects
 
 #### This repository contains all my projects throughout achieving my Bachelor's degree at *Babes-Bolyai University*.
 
