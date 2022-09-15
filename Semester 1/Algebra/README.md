@@ -1,5 +1,5 @@
-#Algebra
-###Covered subjects, by week:
+# Algebra
+### Covered subjects, by week:
 - Week 1 - operations, stable subsets, monoids, groups
 - Week 2 - relations, reflexivity, transitivity, symmetry, congruence, equivalence, partitions, quotient sets
 - Week 3 - groups, subgroups, rings, subrings, group homomorphisms
