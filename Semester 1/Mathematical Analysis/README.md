@@ -1,5 +1,5 @@
-#Mathematical Analysis
-###Covered subjects, by week:
+# Mathematical Analysis
+### Covered subjects, by week:
 - Week 1 - limits & continuity, Thm. Weierstrass, Taylor's formula
 - Week 2 - geometry of multiple spaces, parcial derivatives
 - Week 3 - Thm. Chain, Thm. Lagrange, Thm. Schwarz, Fréchet differential
