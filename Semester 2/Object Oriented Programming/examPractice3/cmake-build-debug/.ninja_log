@@ -1,0 +1,12 @@
+# ninja log v5
+17	1160	6766757813761154	examPractice3_autogen/timestamp	8f734a3209629674
+17	1160	6766757813761154	examPractice3_autogen/mocs_compilation.cpp	8f734a3209629674
+1164	3342	6766757837600394	CMakeFiles/examPractice3.dir/examPractice3_autogen/mocs_compilation.cpp.obj	74eb480d5b51c4b7
+1784	3129	6766561382527934	CMakeFiles/examPractice3.dir/Observer.cpp.obj	7b42df90f18868cf
+1760	3562	6766561387147921	CMakeFiles/examPractice3.dir/Programmer.cpp.obj	5f242fb7f80343a0
+512	1431	6766728975673610	CMakeFiles/examPractice3.dir/ProgrammerRepo.cpp.obj	52e46d4942612363
+533	969	6766746978516398	CMakeFiles/examPractice3.dir/Task.cpp.obj	9ae5d800269d869e
+1169	2264	6766757826810146	CMakeFiles/examPractice3.dir/TaskRepo.cpp.obj	6aea1de80ba68a5e
+1160	3643	6766757840590360	CMakeFiles/examPractice3.dir/main.cpp.obj	2773f0f200919d2c
+1174	4221	6766757846370433	CMakeFiles/examPractice3.dir/programmerwindow.cpp.obj	ee05b7dec20c2e3b
+4221	4935	6766757851146135	examPractice3.exe	93abe91bbe37e04b

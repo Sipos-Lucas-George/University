@@ -1,0 +1,13 @@
+# ninja log v5
+9	1211	6788052196609557	Marti_autogen/timestamp	56a3f91d320de3c6
+9	1211	6788052196609557	Marti_autogen/mocs_compilation.cpp	56a3f91d320de3c6
+1212	3855	6788052225189891	CMakeFiles/Marti.dir/main.cpp.obj	5a5d1ef7e8dc08ba
+1221	2296	6788052209618989	CMakeFiles/Marti.dir/RepoTopics.cpp.obj	30044a139f78c824
+443	1644	6788000928307409	CMakeFiles/Marti.dir/User.cpp.obj	d110a7be5f87617e
+1216	3553	6788052222186001	CMakeFiles/Marti.dir/Marti_autogen/mocs_compilation.cpp.obj	c42832686e2b7de5
+1566	2674	6788006490472471	CMakeFiles/Marti.dir/RepoUsers.cpp.obj	72aed73a2e8910e8
+1179	2722	6788035280513560	CMakeFiles/Marti.dir/RepoPosts.cpp.obj	7b8385c33219bd8e
+1226	4544	6788052232069885	CMakeFiles/Marti.dir/userwindow.cpp.obj	324bd905f194ca4
+1166	2435	6788035277463567	CMakeFiles/Marti.dir/Posts.cpp.obj	8d3cdf1259e00106
+1160	2453	6788035277783583	CMakeFiles/Marti.dir/Topics.cpp.obj	12848cc105495712
+4544	5248	6788052236616302	Marti.exe	f1f84863478a0452
