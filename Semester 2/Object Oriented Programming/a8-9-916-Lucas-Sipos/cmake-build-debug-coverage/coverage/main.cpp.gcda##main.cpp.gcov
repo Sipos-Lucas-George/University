@@ -1,0 +1,208 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/main.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\main.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "UI/UI.h"
+        -:    2:#include "Tests/Tests.h"
+        -:    3:#include "Repository/CSVWatchList.h"
+        -:    4:#include "Repository/HTMLWatchList.h"
+        -:    5:#include <Windows.h>
+        -:    6:
+function main called 1 returned 100% blocks executed 20%
+        1:    7:int main() {
+        1:    8:    Tests::testAll();
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    std::string command;
+        1:    9-block  0
+call    0 returned 1
+        1:   10:    system("cls");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:    while(true) {
+        1:   12:        std::cout << "Choose file type (csv/html) or exit: ";
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:        std::getline(std::cin, command);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   14:        if (command == "e" || command == "exit") {
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   14-block  2
+    %%%%%:   14-block  3
+        1:   14-block  4
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:   15:            std::cout << "Program end!";
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16:            Sleep(1000);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17:            break;
+        1:   17-block  0
+        -:   18:        }
+    #####:   19:        system("cls");
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:        if (command == "csv" || command == "html") {
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   20-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   20-block  2
+    %%%%%:   20-block  3
+    %%%%%:   20-block  4
+branch  6 never executed
+branch  7 never executed
+    #####:   21:            Repository repository{ "Movies.txt" };
+    %%%%%:   21-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   21-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+    $$$$$:   21-block  2
+    $$$$$:   21-block  3
+        -:   22:            WatchList* watchList;
+    #####:   23:            if (command == "csv") {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:                watchList = new CSVWatchList();
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   24-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   24-block  2
+call    6 never executed
+    #####:   25:                watchList->setType("csv");
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   25-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   25-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   25-block  3
+call    9 never executed
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+call   10 never executed
+    $$$$$:   25-block  6
+        -:   26:            }
+        -:   27:            else {
+    #####:   28:                watchList = new HTMLWatchList();
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   28-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   28-block  2
+call    6 never executed
+    #####:   29:                watchList->setType("csv");
+    %%%%%:   29-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   29-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   29-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   29-block  3
+call    9 never executed
+    $$$$$:   29-block  4
+    $$$$$:   29-block  5
+call   10 never executed
+    $$$$$:   29-block  6
+        -:   30:            }
+    #####:   31:            Service service{ repository, watchList };
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:            UI ui{ service };
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:            ui.start();
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   34:            system("cls");
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   35:            continue;
+    %%%%%:   35-block  0
+    #####:   36:        }
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   36-block  1
+call    3 never executed
+    $$$$$:   36-block  2
+call    4 never executed
+    $$$$$:   36-block  3
+call    5 never executed
+    #####:   37:        std::cout << "ERROR!!\n";
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   38:    }
+    %%%%%:   38-block  0
+        1:   39:    return 0;
+        1:   40:}
+        1:   40-block  0
+call    0 returned 1
+    $$$$$:   40-block  1
+call    1 never executed

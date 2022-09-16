@@ -1,0 +1,42 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Service/Service.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\UI\UI.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\UI\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "../Repository/Repository.h"
+        -:    3:#include "../Repository/WatchList.h"
+        -:    4:
+        -:    5:class Service {
+        -:    6:private:
+        -:    7:    Repository repository;
+        -:    8:    WatchList watchList;
+        -:    9:
+        -:   10:public:
+        -:   11:    explicit Service(const Repository& repository);
+        -:   12://    ~Service() = default;
+        -:   13:
+        -:   14:    int addRepository(const Movie& movie);
+        -:   15:    int deleteRepository(int position);
+        -:   16:    int updateRepository(int position, const Movie& movie);
+        -:   17:
+        -:   18:    int addWatchList(const Movie& movie);
+        -:   19:    int deleteWatchList(int position);
+        -:   20:    WatchList filterMoviesByGenre(const std::string& genre);
+        -:   21:
+function _ZN7Service15getAllWatchListEv called 1 returned 100% blocks executed 100%
+        1:   22:    DynamicVector<Movie> getAllWatchList() { return this->watchList.getMovies(); }
+        1:   22-block  0
+call    0 returned 1
+function _ZN7Service16getAllRepositoryEv called 1 returned 100% blocks executed 100%
+        1:   23:    DynamicVector<Movie> getAllRepository() { return this->repository.getMovies(); }
+        1:   23-block  0
+call    0 returned 1
+function _ZN7Service13getRepositoryEv called 1 returned 100% blocks executed 100%
+        1:   24:    Repository getRepository() { return this->repository; }
+        1:   24-block  0
+call    0 returned 1
+function _ZN7Service12getWatchListEv called 1 returned 100% blocks executed 100%
+        1:   25:    WatchList getWatchList() { return this->watchList; }
+        1:   25-block  0
+call    0 returned 1
+        -:   26:};

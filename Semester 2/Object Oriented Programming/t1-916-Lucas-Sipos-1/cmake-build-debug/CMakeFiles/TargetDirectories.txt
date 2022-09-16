@@ -1,0 +1,3 @@
+D:/CLion/t1-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/t1_916_Lucas_Sipos_1.dir
+D:/CLion/t1-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CLion/t1-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

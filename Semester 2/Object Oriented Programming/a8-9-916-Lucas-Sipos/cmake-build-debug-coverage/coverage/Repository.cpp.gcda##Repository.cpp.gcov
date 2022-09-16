@@ -1,0 +1,364 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Repository/Repository.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Repository\Repository.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Repository\Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Repository.h"
+        -:    2:
+        -:    3:#include <utility>
+        -:    4:
+function _ZN10RepositoryC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 70%
+        2:    5:Repository::Repository(std::string filename) {
+        2:    5-block  0
+call    0 returned 2
+call    1 returned 2
+        2:    6:    this->filename = std::move(filename);
+call    0 returned 2
+call    1 returned 2
+        2:    7:    this->readFromFile();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    8:}
+        2:    8-block  0
+    $$$$$:    8-block  1
+call    0 never executed
+    $$$$$:    8-block  2
+call    1 never executed
+        -:    9:
+function _ZN10RepositoryD2Ev called 3 returned 100% blocks executed 100%
+        3:   10:Repository::~Repository() = default;
+        3:   10-block  0
+call    0 returned 3
+call    1 returned 3
+        -:   11:
+function _ZN10Repository8addMovieERK5Movie called 3 returned 67% blocks executed 67%
+        3:   12:void Repository::addMovie(const Movie& movie) {
+        3:   13:    if (this->search(movie.getTitle(), movie.getGenre(), movie.getYear()))
+        3:   13-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   13-block  1
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   13-block  2
+call    8 returned 3
+call    9 returned 3
+branch 10 taken 1 (fallthrough)
+branch 11 taken 2
+    $$$$$:   13-block  3
+call   12 never executed
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+call   13 never executed
+    $$$$$:   13-block  6
+call   14 never executed
+        1:   14:        throw DuplicateMovieException();
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  1
+call    4 returned 0
+    $$$$$:   14-block  2
+call    5 never executed
+        2:   15:    this->movies.push_back(movie);
+        2:   15-block  0
+call    0 returned 2
+        2:   16:    this->writeToFile();
+call    0 returned 2
+        2:   17:}
+        -:   18:
+function _ZN10Repository11deleteMovieEi called 2 returned 100% blocks executed 78%
+        2:   19:void Repository::deleteMovie(int position) {
+        2:   20:    this->movies.erase(this->movies.begin() + position);
+        2:   20-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   20-block  1
+    $$$$$:   20-block  2
+        2:   21:    this->writeToFile();
+        2:   21-block  0
+call    0 returned 2
+        2:   22:}
+        -:   23:
+function _ZN10Repository11updateMovieEiRK5Movie called 3 returned 67% blocks executed 68%
+        3:   24:void Repository::updateMovie(int position, const Movie& movie) {
+        3:   25:    if (this->search(movie.getTitle(), movie.getGenre(), movie.getYear()))
+        3:   25-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   25-block  1
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   25-block  2
+call    8 returned 3
+call    9 returned 3
+branch 10 taken 1 (fallthrough)
+branch 11 taken 2
+    $$$$$:   25-block  3
+call   12 never executed
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+call   13 never executed
+    $$$$$:   25-block  6
+call   14 never executed
+        1:   26:        throw DuplicateMovieException();
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  1
+call    4 returned 0
+    $$$$$:   26-block  2
+call    5 never executed
+        2:   27:    this->movies[position] = movie;
+        2:   27-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   28:    this->writeToFile();
+call    0 returned 2
+        2:   29:}
+        -:   30:
+function _ZN10Repository6searchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_i called 6 returned 100% blocks executed 77%
+        6:   31:bool Repository::search(const std::string& title, const std::string& genre, int year) {
+        6:   32:    bool returnValue = false;
+function _ZZN10Repository6searchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_iENKUlRK5MovieE_clESA_ called 4 returned 100% blocks executed 72%
+        6:   33:    std::for_each(this->movies.begin(), this->movies.end(), [=, &returnValue](const Movie& movie) {
+        6:   33-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   33-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   33-block  2
+call    6 returned 6
+call    7 returned 6
+call    8 returned 6
+branch  9 taken 6 (fallthrough)
+branch 10 taken 0 (throw)
+        6:   33-block  3
+call   11 returned 6
+call   12 returned 6
+    $$$$$:   33-block  4
+call   13 never executed
+    $$$$$:   33-block  5
+        4:   34:        if (movie.getTitle() == title && movie.getGenre() == genre && movie.getYear() == year) returnValue = true;});
+        4:   34-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   34-block  1
+call    3 returned 4
+branch  4 taken 2 (fallthrough)
+branch  5 taken 2
+        2:   34-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   34-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0
+        2:   34-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0
+        2:   34-block  5
+        2:   34-block  6
+        4:   34-block  7
+branch 15 taken 2 (fallthrough)
+branch 16 taken 2
+        2:   34-block  8
+call   17 returned 2
+        4:   34-block  9
+branch 18 taken 4 (fallthrough)
+branch 19 taken 0
+        4:   34-block 10
+call   20 returned 4
+        4:   34-block 11
+branch 21 taken 2 (fallthrough)
+branch 22 taken 2
+        2:   34-block 12
+        4:   34-block 13
+    $$$$$:   34-block 14
+branch 23 never executed
+branch 24 never executed
+    $$$$$:   34-block 15
+call   25 never executed
+    $$$$$:   34-block 16
+    $$$$$:   34-block 17
+branch 26 never executed
+branch 27 never executed
+    $$$$$:   34-block 18
+call   28 never executed
+        6:   35:    return returnValue;
+        6:   35-block  0
+        -:   36:}
+        -:   37:
+function _ZN10RepositoryixEi called 2 returned 100% blocks executed 100%
+        2:   38:Movie& Repository::operator[](int index) {
+        2:   39:    return this->movies[index];
+        2:   39-block  0
+call    0 returned 2
+        -:   40:}
+        -:   41:
+function _ZN10Repository12readFromFileEv called 2 returned 100% blocks executed 39%
+        2:   42:void Repository::readFromFile()
+        -:   43:{
+        2:   44:    std::ifstream file(this->filename);
+        2:   44-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   45:
+        2:   46:    if (!file.is_open())
+        2:   46-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   46-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    #####:   47:        throw FileException("The file could not be opened!");
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   47-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   47-block  2
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    $$$$$:   47-block  3
+call   11 never executed
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+call   12 never executed
+    $$$$$:   47-block  6
+    $$$$$:   47-block  7
+call   13 never executed
+        2:   48:    Movie movie;
+        2:   48-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   49:    while (file >> movie)
+        2:   49-block  0
+        2:   49-block  1
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   49-block  2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   49-block  3
+branch  6 taken 0
+branch  7 taken 2 (fallthrough)
+    #####:   50:        if (movie.getLikes() != -1)
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        2:   51:            this->movies.push_back(movie);
+        2:   51-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   52:    file.close();
+        2:   52-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:   52-block  1
+call    2 never executed
+    $$$$$:   52-block  2
+call    3 never executed
+        -:   53:}
+function _ZN10Repository11writeToFileEv called 6 returned 100% blocks executed 44%
+        6:   54:
+        -:   55:void Repository::writeToFile()
+        6:   56:{
+        6:   56-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   57:    std::ofstream file(this->filename);
+        6:   57-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   57-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 6
+    #####:   58:    if (!file.is_open())
+    %%%%%:   58-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   58-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   58-block  2
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    $$$$$:   58-block  3
+call   11 never executed
+    $$$$$:   58-block  4
+    $$$$$:   58-block  5
+call   12 never executed
+    $$$$$:   58-block  6
+    $$$$$:   58-block  7
+call   13 never executed
+       10:   59:        throw FileException("The file could not be opened!");
+        6:   59-block  0
+call    0 returned 6
+call    1 returned 6
+        4:   59-block  1
+call    2 returned 4
+        4:   59-block  2
+call    3 returned 4
+       10:   59-block  3
+call    4 returned 10
+branch  5 taken 4
+branch  6 taken 6 (fallthrough)
+        4:   60:    for (const auto& movie : this->movies)
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   61:        file << movie;
+        6:   62:
+        6:   62-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   63:    file.close();
+        6:   63-block  0
+call    0 returned 6
+    $$$$$:   63-block  1
+call    1 never executed
+        -:   64:}

@@ -1,0 +1,45 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Service/Service.h
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "../Repository/Repository.h"
+        -:    3:#include "../Repository/WatchList.h"
+        -:    4:#include "../Repository/CSVWatchList.h"
+        -:    5:#include "../Repository/HTMLWatchList.h"
+        -:    6:#include "../ExceptionsValidators/Exceptions.h"
+        -:    7:
+        -:    8:class Service {
+        -:    9:private:
+        -:   10:    Repository repository;
+        -:   11:    WatchList* watchList;
+        -:   12:
+        -:   13:public:
+        -:   14:    explicit Service(const Repository& repository, WatchList* watchList);
+        -:   15:    ~Service();
+        -:   16:
+        -:   17:    void addRepository(const Movie& movie);
+        -:   18:    void deleteRepository(int position);
+        -:   19:    void updateRepository(int position, const Movie& movie);
+        -:   20:    void incrementLikes(int pos);
+        -:   21:
+        -:   22:    int addWatchList(const Movie& movie);
+        -:   23:    int deleteWatchList(int position);
+        -:   24:    WatchList* filterMoviesByGenre(const std::string& genre, const std::string& type);
+        -:   25:
+function _ZN7Service15getAllWatchListEv called 0 returned 0% blocks executed 0%
+    #####:   26:    std::vector<Movie> getAllWatchList() { return this->watchList->getMovies(); }
+    %%%%%:   26-block  0
+call    0 never executed
+function _ZN7Service16getAllRepositoryEv called 2 returned 100% blocks executed 100%
+        2:   27:    std::vector<Movie> getAllRepository() { return this->repository.getMovies(); }
+        2:   27-block  0
+call    0 returned 2
+function _ZN7Service7getTypeB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   28:    std::string getType() { return this->watchList->getType(); }
+    %%%%%:   28-block  0
+call    0 never executed
+        -:   29:
+        -:   30:    void watchListSave();
+        -:   31:    void watchListOpen();
+        -:   32:};

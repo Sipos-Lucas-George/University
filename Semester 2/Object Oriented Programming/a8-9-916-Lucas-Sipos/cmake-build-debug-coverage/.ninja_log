@@ -1,0 +1,15 @@
+# ninja log v5
+36	3994	6719282349806916	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/WatchList.cpp.obj	e81a1b81ff96559b
+5	1556	6719677263798581	CMakeFiles/a8-9-916-Lucas-Sipos.dir/main.cpp.obj	531bc125420c619
+26	4067	6717533882529512	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/Repository.cpp.obj	ddd1cfe206392041
+42	2350	6719676126660249	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Tests/Tests.cpp.obj	208145c4f524025d
+34	2172	6719676124900344	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Service/Service.cpp.obj	1b884fb1741c78f2
+4	1797	6717536713397897	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Domain/Movie.cpp.obj	ee2a9f7c0b6f28ed
+6	2239	6719676125580268	CMakeFiles/a8-9-916-Lucas-Sipos.dir/UI/UI.cpp.obj	5626507687bdaa9c
+1847	2127	6719680026869460	a8-9-916-Lucas-Sipos.exe	9f07ad24d3d0d36e
+4	1847	6719680024149746	CMakeFiles/a8-9-916-Lucas-Sipos.dir/ExceptionsValidators/Validator.cpp.obj	ef190dc922d5678b
+8	790	6737389142440391	build.ninja	383ddfe4865e04ad
+4	285	6713616180765042	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Exceptions/Exceptions.cpp.obj	e77fc757f4e8d1a6
+56	1055	6717512902360244	CMakeFiles/a8-9-916-Lucas-Sipos.dir/ExceptionsValidators/Exceptions.cpp.obj	47ddabdf49b8cf9e
+49	3617	6719282345986937	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/CSVWatchList.cpp.obj	8de2e1b1a8ea6599
+63	3409	6719282343876933	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/HTMLWatchList.cpp.obj	b6d77281eba1cba0

@@ -1,0 +1,61 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/ExceptionsValidators/Exceptions.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\ExceptionsValidators\Exceptions.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\ExceptionsValidators\Exceptions.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Exceptions.h"
+        -:    2:
+        -:    3:#include <utility>
+        -:    4:
+function _ZN13FileExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:    5:FileException::FileException(std::string  msg) : message(std::move(msg))
+    %%%%%:    5-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:    6:{
+    #####:    7:}
+        -:    8:
+function _ZN13FileException4whatEv called 0 returned 0% blocks executed 0%
+    #####:    9:const char * FileException::what()
+        -:   10:{
+    #####:   11:    return message.c_str();
+    %%%%%:   11-block  0
+call    0 never executed
+        -:   12:}
+        -:   13:
+function _ZN19RepositoryExceptionC2Ev called 4 returned 100% blocks executed 100%
+        4:   14:RepositoryException::RepositoryException() : exception{} {}
+        4:   14-block  0
+call    0 returned 4
+call    1 returned 4
+        -:   15:
+function _ZN19RepositoryExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   16:RepositoryException::RepositoryException(std::string  msg) : message{std::move( msg )}
+    %%%%%:   16-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   17:{
+    #####:   18:}
+        -:   19:
+function _ZN19RepositoryException4whatEv called 0 returned 0% blocks executed 0%
+    #####:   20:const char * RepositoryException::what()
+        -:   21:{
+    #####:   22:    return this->message.c_str();
+    %%%%%:   22-block  0
+call    0 never executed
+        -:   23:}
+        -:   24:
+function _ZN23DuplicateMovieException4whatEv called 0 returned 0% blocks executed 0%
+    #####:   25:const char * DuplicateMovieException::what()
+        -:   26:{
+    #####:   27:    return "There is another movie with the same title, genre and year!";
+    %%%%%:   27-block  0
+        -:   28:}
+        -:   29:
+function _ZN17IncorrectPosition4whatEv called 0 returned 0% blocks executed 0%
+    #####:   30:const char * IncorrectPosition::what()
+        -:   31:{
+    #####:   32:    return "Incorrect Position";
+    %%%%%:   32-block  0
+        -:   33:}

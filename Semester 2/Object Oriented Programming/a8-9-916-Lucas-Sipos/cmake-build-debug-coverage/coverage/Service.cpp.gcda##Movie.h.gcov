@@ -1,0 +1,41 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Domain/Movie.h
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Service\Service.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <iostream>
+        -:    3:#include <Windows.h>
+        -:    4:#include <shellapi.h>
+        -:    5:#include <utility>
+        -:    6:#include <vector>
+        -:    7:
+        -:    8:class Movie {
+        -:    9:private:
+        -:   10:    std::string title;
+        -:   11:    std::string genre;
+        -:   12:    int year;
+        -:   13:    int likes;
+        -:   14:    std::string trailer;
+        -:   15:    int ifLiked;
+        -:   16:
+        -:   17:public:
+        -:   18:    Movie();
+        -:   19:    Movie(std::string,std::string,int,int,std::string);
+        -:   20:    ~Movie();
+        -:   21:
+        -:   22:    std::string getTitle() const { return this->title; }
+function _ZNK5Movie8getGenreB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   23:    std::string getGenre() const { return this->genre; }
+    %%%%%:   23-block  0
+call    0 never executed
+        -:   24:    int getYear() const { return this->year; }
+        -:   25:    int getLikes() const { return this->likes; }
+        -:   26:    std::string getTrailer() const { return this->trailer; }
+        -:   27:
+        -:   28:    void incrementLikes();
+        -:   29:    void playTrailer() const;
+        -:   30:    std::string toString();
+        -:   31:
+        -:   32:    friend std::istream& operator>>(std::istream& is, Movie& s);
+        -:   33:    friend std::ostream& operator<<(std::ostream& os, const Movie& s);
+        -:   34:};

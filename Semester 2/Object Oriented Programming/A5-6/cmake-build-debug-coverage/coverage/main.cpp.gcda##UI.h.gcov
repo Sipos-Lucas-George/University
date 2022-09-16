@@ -1,0 +1,44 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/UI/UI.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <utility>
+        -:    3:
+        -:    4:#include "../Service/Service.h"
+        -:    5:
+        -:    6:class UI{
+        -:    7:private:
+        -:    8:    Service service;
+        -:    9:
+        -:   10:public:
+function _ZN2UIC1E7Service called 1 returned 100% blocks executed 100%
+        1:   11:    explicit UI(Service service) : service(std::move(service)) {}
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   12://    ~UI() = default;
+        -:   13:
+        -:   14:    void start();
+        -:   15:    void runAdminMode();
+        -:   16:    void runUserMode();
+        -:   17:
+        -:   18:    static void printStartMenu();
+        -:   19:    static void printAdminMenu();
+        -:   20:    static void printUserMenu();
+        -:   21:    static void printWatchMenu();
+        -:   22:
+        -:   23:    int addMovieService();
+        -:   24:    int deleteMovieService();
+        -:   25:    int updateMovieService();
+        -:   26:    void listAllMovies();
+        -:   27:
+        -:   28:    void watchStart();
+        -:   29:    int userDelete();
+        -:   30:    void printWatchList();
+        -:   31:
+        -:   32:    static bool verifyMovie(const std::string& genre, const std::string& year, const std::string& likes);
+        -:   33:    static bool verifyPositionType(const std::string& position);
+        -:   34:
+        -:   35:    void initialization();
+        -:   36:};

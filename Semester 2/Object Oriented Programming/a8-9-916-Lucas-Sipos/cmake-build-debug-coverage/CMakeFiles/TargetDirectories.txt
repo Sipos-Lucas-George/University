@@ -1,0 +1,5 @@
+D:/CLion/a8-9-916-Lucas-Sipos/cmake-build-debug-coverage/CMakeFiles/a11-12-916-Lucas-Sipos.dir
+D:/CLion/a8-9-916-Lucas-Sipos/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+D:/CLion/a8-9-916-Lucas-Sipos/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+D:/CLion/a8-9-916-Lucas-Sipos/cmake-build-debug-coverage/CMakeFiles/a11-12-916-Lucas-Sipos_autogen_timestamp_deps.dir
+D:/CLion/a8-9-916-Lucas-Sipos/cmake-build-debug-coverage/CMakeFiles/a11-12-916-Lucas-Sipos_autogen.dir

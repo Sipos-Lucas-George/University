@@ -1,0 +1,283 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Domain/Movie.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Domain\Movie.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Domain\Movie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Movie.h"
+        -:    2:
+function _ZN5MovieC2Ev called 3 returned 100% blocks executed 100%
+        3:    3:Movie::Movie() {
+        3:    3-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:    4:    this->year = 0;
+        3:    5:    this->likes = 0;
+        3:    6:    this->ifLiked = 0;
+        3:    7:}
+        -:    8:
+function _ZN5MovieD2Ev called 33 returned 100% blocks executed 100%
+       33:    9:Movie::~Movie() = default;
+       33:    9-block  0
+call    0 returned 33
+call    1 returned 33
+call    2 returned 33
+        -:   10:
+function _ZN5MovieC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_iiS5_ called 16 returned 100% blocks executed 100%
+       16:   11:Movie::Movie(std::string title, std::string genre, int year, int likes, std::string trailer) {
+       16:   11-block  0
+call    0 returned 16
+call    1 returned 16
+call    2 returned 16
+       16:   12:    this->title = std::move(title);
+call    0 returned 16
+call    1 returned 16
+       16:   13:    this->genre = std::move(genre);
+call    0 returned 16
+call    1 returned 16
+       16:   14:    this->year = year;
+       16:   15:    this->likes = likes;
+       16:   16:    this->trailer = std::move(trailer);
+call    0 returned 16
+call    1 returned 16
+       16:   17:    this->ifLiked = 0;
+       16:   18:}
+        -:   19:
+function _ZN5Movie14incrementLikesEv called 3 returned 100% blocks executed 100%
+        3:   20:void Movie::incrementLikes() {
+        3:   21:    if (this->ifLiked == 0) {
+        3:   21-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   22:        this->ifLiked = 1;
+        2:   23:        ++this->likes;
+        2:   23-block  0
+        -:   24:    }
+        3:   25:}
+        -:   26:
+function _ZNK5Movie11playTrailerEv called 0 returned 0% blocks executed 0%
+    #####:   27:void Movie::playTrailer() const {
+    #####:   28:    ShellExecuteA(nullptr, nullptr, "chrome.exe", this->getTrailer().c_str(), nullptr, SW_SHOWMAXIMIZED);
+    %%%%%:   28-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   28-block  1
+call    5 never executed
+    $$$$$:   28-block  2
+call    6 never executed
+    #####:   29:}
+        -:   30:
+function _ZN5Movie8toStringB5cxx11Ev called 2 returned 100% blocks executed 47%
+        2:   31:std::string Movie::toString() {
+        2:   32:    std::string str;
+        2:   32-block  0
+call    0 returned 2
+        2:   33:    str = "\tTitle: " + this->title + " Genre: " + this->genre + " Year: " + std::to_string(this->year) + " Likes: " + std::to_string(this->likes) + "\n\tTrailer: " + this->trailer;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   33-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   33-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   33-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   33-block  4
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   33-block  5
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:   33-block  6
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:   33-block  7
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:   33-block  8
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:   33-block  9
+call   30 returned 2
+branch 31 taken 2 (fallthrough)
+branch 32 taken 0 (throw)
+        2:   33-block 10
+call   33 returned 2
+call   34 returned 2
+call   35 returned 2
+call   36 returned 2
+call   37 returned 2
+call   38 returned 2
+call   39 returned 2
+call   40 returned 2
+call   41 returned 2
+call   42 returned 2
+call   43 returned 2
+call   44 returned 2
+    $$$$$:   33-block 11
+call   45 never executed
+    $$$$$:   33-block 12
+    $$$$$:   33-block 13
+call   46 never executed
+    $$$$$:   33-block 14
+    $$$$$:   33-block 15
+call   47 never executed
+    $$$$$:   33-block 16
+    $$$$$:   33-block 17
+call   48 never executed
+    $$$$$:   33-block 18
+    $$$$$:   33-block 19
+call   49 never executed
+    $$$$$:   33-block 20
+    $$$$$:   33-block 21
+call   50 never executed
+    $$$$$:   33-block 22
+    $$$$$:   33-block 23
+call   51 never executed
+    $$$$$:   33-block 24
+    $$$$$:   33-block 25
+call   52 never executed
+    $$$$$:   33-block 26
+    $$$$$:   33-block 27
+call   53 never executed
+    $$$$$:   33-block 28
+    $$$$$:   33-block 29
+call   54 never executed
+    $$$$$:   33-block 30
+        2:   34:    return str;
+        2:   34-block  0
+    =====:   35:}
+    $$$$$:   35-block  0
+call    0 never executed
+        -:   36:
+function _ZrsRSiR5Movie called 2 returned 100% blocks executed 35%
+        2:   37:std::istream& operator>>(std::istream& is, Movie& movie) {
+        2:   38:    if (is.eof())
+        2:   38-block  0
+call    0 returned 2
+branch  1 taken 0 (fallthrough)
+branch  2 taken 2
+    #####:   39:        is.setstate(std::ios_base::failbit);
+    %%%%%:   39-block  0
+call    0 never executed
+        -:   40:    else {
+        2:   41:        std::string string;
+        2:   41-block  0
+call    0 returned 2
+        2:   42:        std::vector<std::string> out;
+call    0 returned 2
+        2:   43:        getline(is, string);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   44:        if (!string.empty()) {
+        2:   44-block  0
+call    0 returned 2
+branch  1 taken 0 (fallthrough)
+branch  2 taken 2
+        -:   45:            size_t start;
+    #####:   46:            size_t end = 0;
+    #####:   47:            while ((start = string.find_first_not_of(',', end)) != std::string::npos) {
+    %%%%%:   47-block  0
+    %%%%%:   47-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:                end = string.find(',', start);
+    %%%%%:   48-block  0
+call    0 never executed
+    #####:   49:                out.push_back(string.substr(start, end - start));
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   49-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   49-block  1
+call    6 never executed
+    $$$$$:   49-block  2
+call    7 never executed
+    $$$$$:   49-block  3
+        -:   50:            }
+    #####:   51:            movie.title = out[0];
+    %%%%%:   51-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   52:            movie.genre = out[1];
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   53:            movie.year = stoi(out[2]);
+    %%%%%:   53-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   54:            movie.likes = stoi(out[3]);
+    %%%%%:   54-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   55:            movie.trailer = out[4];
+    %%%%%:   55-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:   56:        }
+        -:   57:        else
+        2:   58:            movie.likes = -1;
+        2:   58-block  0
+        2:   59:    }
+        2:   59-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:   59-block  1
+call    2 never executed
+    $$$$$:   59-block  2
+call    3 never executed
+        2:   60:    return is;
+        2:   60-block  0
+        2:   60-block  1
+        -:   61:}
+        -:   62:
+function _ZlsRSoRK5Movie called 4 returned 100% blocks executed 100%
+        4:   63:std::ostream& operator<<(std::ostream& os, const Movie& movie)
+        -:   64:{
+        4:   65:    os << movie.title << "," << movie.genre << "," << movie.year << "," << movie.likes << "," << movie.trailer << "\n";
+        4:   65-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+call    7 returned 4
+call    8 returned 4
+call    9 returned 4
+        4:   66:    return os;
+        -:   67:}

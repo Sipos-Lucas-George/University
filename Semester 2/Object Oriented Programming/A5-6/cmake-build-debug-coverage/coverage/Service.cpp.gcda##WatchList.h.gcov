@@ -1,0 +1,66 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Repository/WatchList.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "DynamicVector.h"
+        -:    3:#include "../Domain/Movie.h"
+        -:    4:
+        -:    5:class WatchList {
+        -:    6:private:
+        -:    7:    DynamicVector<Movie> movies;
+        -:    8:    int current{};
+        -:    9:
+        -:   10:public:
+function _ZN9WatchListC1Ev called 6 returned 100% blocks executed 100%
+        6:   11:    WatchList() = default;
+        6:   11-block  0
+call    0 returned 6
+        -:   12://    ~WatchList() = default;
+        -:   13:
+        -:   14:    // Check if the movie already exists, otherwise insert in the container
+        -:   15:    // Input: movie - Movie entity
+        -:   16:    // Output: 0 - error, 1 - otherwise
+        -:   17:    int addMovie(const Movie& movie);
+        -:   18:
+        -:   19:    // Check if the movie exists and remove it from the container
+        -:   20:    // Input: position - position to delete in DynamicVector
+        -:   21:    // Output: 0 - error, 1 - otherwise
+        -:   22:    int deleteMovieByPos(int position);
+        -:   23:
+        -:   24:    // delete movie by finding movie
+        -:   25:    void deleteMovie(Movie& movie);
+        -:   26:
+        -:   27:    // play the current movie trailer
+        -:   28:    void play();
+        -:   29:
+        -:   30:    // play next current++ movie trailer
+        -:   31:    void next();
+        -:   32:
+        -:   33:    // get movie[current]
+        -:   34:    Movie getCurrentMovie();
+        -:   35:
+        -:   36:    // Find a movie by title genre and year
+        -:   37:    // Input: title - movie title
+        -:   38:    //		  genre - movie genre
+        -:   39:    //		  year - movie year
+        -:   40:    // Output: true - find, false otherwise
+        -:   41:    bool binarySearchMovie(const std::string& title, const std::string& genre, int year);
+        -:   42:
+        -:   43:    // Compares two movies
+        -:   44:    // Input:   index - index for this->movies[..]
+        -:   45:    //          title - movie title
+        -:   46:    //		    genre - movie genre
+        -:   47:    //		    year - movie year
+        -:   48:    // Output: true - movie == movie, false - otherwise
+        -:   49:    static bool compareIfSameMovie(const Movie& movie, const std::string& title, const std::string& genre, int year);
+        -:   50:
+        -:   51:    // Return movie collection
+        -:   52:    DynamicVector<Movie> getMovies() const { return this->movies; }
+        -:   53:    Movie operator[](int index);
+        -:   54:
+function _ZN9WatchList7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   55:    int getSize() { return this->movies.getSize(); }
+    %%%%%:   55-block  0
+call    0 never executed
+        -:   56:};

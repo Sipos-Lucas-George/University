@@ -1,0 +1,165 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Repository/DynamicVector.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Repository\Repository.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Repository\Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#define RESIZE 2
+        -:    3:
+        -:    4:template<typename T>
+        -:    5:class DynamicVector {
+        -:    6:private:
+        -:    7:    T* elements;
+        -:    8:    int size{};
+        -:    9:    int capacity{};
+        -:   10:
+        -:   11:public:
+        -:   12:    // default constructor for DynamicVector
+        -:   13:    explicit DynamicVector(int capacity = 10);
+        -:   14:
+        -:   15:    // copy constructor for a DynamicVector
+        -:   16:    DynamicVector(const DynamicVector<T>& vector);
+        -:   17:
+        -:   18:    // destructor for DynamicVector
+        -:   19://    ~DynamicVector();
+        -:   20:
+        -:   21:    // add an element to the current DynamicVector
+        -:   22:    void addItem(const T& element);
+        -:   23:
+        -:   24:    // delete an element from the current DynamicVector
+        -:   25:    void deleteItem(int position);
+        -:   26:
+        -:   27:    // update an element on a given position from the current DynamicVector
+        -:   28:    void updateItem(int position, T element);
+        -:   29:
+        -:   30:    // resize the current DynamicVector
+        -:   31:    void resize();
+        -:   32:
+        -:   33:    T operator[](int index);
+function _ZNK13DynamicVectorI5MovieE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   34:    int getSize() const { return this->size; }
+    %%%%%:   34-block  0
+        -:   35:    int getCapacity() const { return this->capacity; }
+        -:   36:    T getElement(const int position) const { return this->elements[position]; }
+        -:   37:};
+        -:   38:
+        -:   39:template<typename T>
+        -:   40:DynamicVector<T>::DynamicVector(int capacity) {
+        -:   41:    this->size = 0;
+        -:   42:    this->capacity = capacity;
+        -:   43:    this->elements = new T[capacity];
+        -:   44:}
+        -:   45:
+        -:   46:template<typename T>
+        -:   47:DynamicVector<T>::DynamicVector(const DynamicVector<T> &vector) {
+        -:   48:    this->size = vector.getSize();
+        -:   49:    this->capacity = vector.getCapacity();
+        -:   50:    this->elements = new T[this->capacity];
+        -:   51:    for (int i = 0; i < this->size; ++i)
+        -:   52:        this->elements[i] = vector.getElement(i);
+        -:   53:}
+        -:   54:
+        -:   55://template<typename T>
+        -:   56://DynamicVector<T>::~DynamicVector() {
+        -:   57://    delete[] this->elements;
+        -:   58://}
+        -:   59:
+        -:   60:template<typename T>
+function _ZN13DynamicVectorI5MovieE7addItemERKS0_ called 22 returned 100% blocks executed 100%
+       22:   61:void DynamicVector<T>::addItem(const T &element) {
+       22:   62:    if (this->size == this->capacity)
+       22:   62-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 21
+        1:   63:        this->resize();
+        1:   63-block  0
+call    0 returned 1
+       22:   64:    this->elements[this->size++] = element;
+       22:   64-block  0
+call    0 returned 22
+       22:   65:}
+        -:   66:
+        -:   67:template<typename T>
+function _ZN13DynamicVectorI5MovieE10deleteItemEi called 6 returned 100% blocks executed 100%
+        6:   68:void DynamicVector<T>::deleteItem(int position) {
+       12:   69:    for (int i = position; i < this->size - 1; ++i)
+        6:   69-block  0
+       12:   69-block  1
+branch  0 taken 6
+branch  1 taken 6 (fallthrough)
+        6:   70:        this->elements[i] = this->elements[i + 1];
+        6:   70-block  0
+call    0 returned 6
+        6:   71:    --this->size;
+        6:   72:}
+        -:   73:
+        -:   74:template<typename T>
+function _ZN13DynamicVectorI5MovieE10updateItemEiS0_ called 3 returned 100% blocks executed 100%
+        3:   75:void DynamicVector<T>::updateItem(int position, T element) {
+        3:   76:    this->elements[position] = element;
+        3:   76-block  0
+call    0 returned 3
+        3:   77:}
+        -:   78:
+        -:   79:template<typename T>
+function _ZN13DynamicVectorI5MovieE6resizeEv called 1 returned 100% blocks executed 64%
+        1:   80:void DynamicVector<T>::resize() {
+        1:   81:    this->capacity *= RESIZE;
+        -:   82:
+       3*:   83:    auto* els = new T[this->capacity];
+        1:   83-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   83-block  1
+    %%%%%:   83-block  2
+        1:   83-block  3
+call    2 returned 1
+        2:   83-block  4
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   83-block  5
+        3:   83-block  6
+branch  6 taken 2
+branch  7 taken 1 (fallthrough)
+    $$$$$:   83-block  7
+    $$$$$:   83-block  8
+call    8 never executed
+    $$$$$:   83-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   83-block 10
+    $$$$$:   83-block 11
+    $$$$$:   83-block 12
+call   11 never executed
+        2:   84:    for (int i = 0; i < this->size; ++i)
+        1:   84-block  0
+        2:   84-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:   85:        els[i] = this->elements[i];
+        1:   85-block  0
+call    0 returned 1
+        -:   86:
+        2:   87:    delete[] this->elements;
+        1:   87-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   87-block  1
+        2:   87-block  2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        1:   87-block  3
+call    4 returned 1
+        1:   87-block  4
+call    5 returned 1
+        1:   88:    this->elements = els;
+        1:   89:}
+        1:   89-block  0
+        -:   90:
+        -:   91:template<typename T>
+function _ZN13DynamicVectorI5MovieEixEi called 0 returned 0% blocks executed 0%
+    #####:   92:T DynamicVector<T>::operator[](int index) {
+    #####:   93:    return this->elements[index];
+    %%%%%:   93-block  0
+call    0 never executed
+        -:   94:}

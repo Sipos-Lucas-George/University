@@ -1,0 +1,58 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Repository/Repository.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "../Domain/Movie.h"
+        -:    3:#include "DynamicVector.h"
+        -:    4:
+        -:    5:class Repository {
+        -:    6:private:
+        -:    7:    DynamicVector<Movie> movies;
+        -:    8:
+        -:    9:public:
+function _ZN10RepositoryC1Ev called 5 returned 100% blocks executed 100%
+        5:   10:    Repository() = default;
+        5:   10-block  0
+call    0 returned 5
+        -:   11://    ~Repository() = default;
+        -:   12:
+        -:   13:    // Check if the movie already exists, otherwise insert in the container
+        -:   14:    // Input: movie - Movie entity
+        -:   15:    // Output: 0 - error, 1 - otherwise
+        -:   16:    int addMovie(const Movie& movie);
+        -:   17:
+        -:   18:    // Check if the movie exists and remove it from the container
+        -:   19:    // Input: position - position to delete in DynamicVector
+        -:   20:    // Output: 1
+        -:   21:    int deleteMovie(int position);
+        -:   22:
+        -:   23:    // Check if the movie exists and update with the new Movie entity
+        -:   24:    // Input: position - position to update
+        -:   25:    //        movie - new Movie entity
+        -:   26:    // Output: 0 - error, 1 - otherwise
+        -:   27:    int updateMovie(int position, const Movie& movie);
+        -:   28:
+        -:   29:    // Find a movie by title genre and year
+        -:   30:    // Input: title - movie title
+        -:   31:    //		  genre - movie genre
+        -:   32:    //		  year - movie year
+        -:   33:    // Output: true - find, false otherwise
+        -:   34:    bool binarySearchMovie(const std::string& title, const std::string& genre, int year);
+        -:   35:
+        -:   36:    // Compares two movies
+        -:   37:    // Input:   index - index for this->movies[..]
+        -:   38:    //          title - movie title
+        -:   39:    //		    genre - movie genre
+        -:   40:    //		    year - movie year
+        -:   41:    // Output: true - movie == movie, false - otherwise
+        -:   42:    static bool compareIfSameMovie(const Movie& movie, const std::string& title, const std::string& genre, int year);
+        -:   43:
+        -:   44:    // finds the position of a movie and returns its index
+        -:   45:    int findPositionOfMovie(const Movie& movie);
+        -:   46:
+        -:   47:    // Return movie collection
+        -:   48:    DynamicVector<Movie> getMovies() const { return this->movies; }
+        -:   49:    int getSize(){ return this->movies.getSize(); }
+        -:   50:    Movie operator[](int index);
+        -:   51:};

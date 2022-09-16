@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="A5_6"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/CLion/A5-6/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="A5_6">
+				<Option output="D:/CLion/A5-6/cmake-build-debug-coverage/A5_6.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLion/A5-6/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 A5_6"/>
+					<CompileFile command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="A5_6/fast">
+				<Option output="D:/CLion/A5-6/cmake-build-debug-coverage/A5_6.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLion/A5-6/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/XSSD Instalations/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 A5_6/fast"/>
+					<CompileFile command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/CLion/A5-6/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/CLion/A5-6/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/XSSDIN~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;D:/CLion/A5-6/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/CLion/A5-6/Domain/Movie.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Domain/Movie.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Repository/DynamicVector.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Repository/Repository.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Repository/Repository.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Repository/WatchList.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Repository/WatchList.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Service/Service.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Service/Service.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Tests/Tests.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/Tests/Tests.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/UI/UI.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/UI/UI.h">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/main.cpp">
+			<Option target="A5_6"/>
+		</Unit>
+		<Unit filename="D:/CLion/A5-6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

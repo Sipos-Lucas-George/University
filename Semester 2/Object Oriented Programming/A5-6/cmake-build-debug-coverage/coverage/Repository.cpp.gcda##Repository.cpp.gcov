@@ -1,0 +1,340 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Repository/Repository.cpp
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Repository\Repository.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Repository\Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Repository.h"
+        -:    2:
+function _ZN10Repository8addMovieERK5Movie called 12 returned 100% blocks executed 71%
+       12:    3:int Repository::addMovie(const Movie& movie) {
+       12:    4:    if (binarySearchMovie(movie.getTitle(), movie.getGenre(), movie.getYear()))
+       12:    4-block  0
+call    0 returned 12
+call    1 returned 12
+call    2 returned 12
+branch  3 taken 12 (fallthrough)
+branch  4 taken 0 (throw)
+       12:    4-block  1
+call    5 returned 12
+branch  6 taken 12 (fallthrough)
+branch  7 taken 0 (throw)
+       12:    4-block  2
+call    8 returned 12
+call    9 returned 12
+branch 10 taken 1 (fallthrough)
+branch 11 taken 11
+    $$$$$:    4-block  3
+call   12 never executed
+    $$$$$:    4-block  4
+    $$$$$:    4-block  5
+call   13 never executed
+        1:    5:        return 0;
+        1:    5-block  0
+       11:    6:    this->movies.addItem(movie);
+       11:    6-block  0
+call    0 returned 11
+       11:    7:    return 1;
+        -:    8:}
+        -:    9:
+function _ZN10Repository11deleteMovieEi called 2 returned 100% blocks executed 100%
+        2:   10:int Repository::deleteMovie(int position) {
+        2:   11:    this->movies.deleteItem(position);
+        2:   11-block  0
+call    0 returned 2
+        2:   12:    return 1;
+        -:   13:}
+        -:   14:
+function _ZN10Repository11updateMovieEiRK5Movie called 3 returned 100% blocks executed 64%
+        3:   15:int Repository::updateMovie(int position, const Movie& movie) {
+        3:   16:    if (binarySearchMovie(movie.getTitle(), movie.getGenre(), movie.getYear()))
+        3:   16-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   16-block  1
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   16-block  2
+call    8 returned 3
+call    9 returned 3
+branch 10 taken 1 (fallthrough)
+branch 11 taken 2
+    $$$$$:   16-block  3
+call   12 never executed
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+call   13 never executed
+    $$$$$:   16-block  6
+call   14 never executed
+        1:   17:        return 0;
+        1:   17-block  0
+        2:   18:    this->movies.updateItem(position, movie);
+        2:   18-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   18-block  1
+call    4 returned 2
+    $$$$$:   18-block  2
+call    5 never executed
+        2:   19:    return 1;
+        -:   20:}
+        -:   21:
+function _ZN10Repository17binarySearchMovieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_i called 15 returned 100% blocks executed 70%
+       15:   22:bool Repository::binarySearchMovie(const std::string& title, const std::string& genre, int year) {
+       15:   23:    int left = 0, right = this->movies.getSize();
+       15:   23-block  0
+call    0 returned 15
+       42:   24:    while (left <= right){
+       42:   24-block  0
+branch  0 taken 29
+branch  1 taken 13 (fallthrough)
+       29:   25:        int mid = (left + right) / 2;
+       29:   26:        if (compareIfSameMovie(this->movies[mid], title, genre, year))
+       29:   26-block  0
+call    0 returned 29
+call    1 returned 29
+branch  2 taken 29 (fallthrough)
+branch  3 taken 0 (throw)
+       29:   26-block  1
+call    4 returned 29
+branch  5 taken 2 (fallthrough)
+branch  6 taken 27
+    $$$$$:   26-block  2
+call    7 never executed
+    $$$$$:   26-block  3
+call    8 never executed
+        2:   27:            return true;
+        2:   27-block  0
+       27:   28:        else if (this->movies[mid].getTitle().compare(title) < 0)
+       27:   28-block  0
+call    0 returned 27
+call    1 returned 27
+branch  2 taken 27 (fallthrough)
+branch  3 taken 0 (throw)
+       27:   28-block  1
+call    4 returned 27
+branch  5 taken 27 (fallthrough)
+branch  6 taken 0 (throw)
+       27:   28-block  2
+call    7 returned 27
+call    8 returned 27
+branch  9 taken 20 (fallthrough)
+branch 10 taken 7
+    $$$$$:   28-block  3
+call   11 never executed
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+call   12 never executed
+       20:   29:            left = mid + 1;
+       20:   29-block  0
+        -:   30:        else
+        7:   31:            right = mid - 1;
+        7:   31-block  0
+        -:   32:    }
+       13:   33:    return false;
+       13:   33-block  0
+        -:   34:}
+        -:   35:
+function _ZN10Repository18compareIfSameMovieERK5MovieRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_i called 29 returned 100% blocks executed 73%
+       29:   36:bool Repository::compareIfSameMovie(const Movie& movie, const std::string& title, const std::string& genre, int year) {
+       29:   37:    if (movie.getTitle() == title && movie.getGenre() == genre && movie.getYear() == year)
+       29:   37-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   37-block  1
+call    3 returned 29
+branch  4 taken 2 (fallthrough)
+branch  5 taken 27
+        2:   37-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   37-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0
+        2:   37-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0
+        2:   37-block  5
+       27:   37-block  6
+       29:   37-block  7
+branch 15 taken 2 (fallthrough)
+branch 16 taken 27
+        2:   37-block  8
+call   17 returned 2
+       29:   37-block  9
+branch 18 taken 29 (fallthrough)
+branch 19 taken 0
+       29:   37-block 10
+call   20 returned 29
+       29:   37-block 11
+branch 21 taken 2 (fallthrough)
+branch 22 taken 27
+    $$$$$:   37-block 12
+branch 23 never executed
+branch 24 never executed
+    $$$$$:   37-block 13
+call   25 never executed
+    $$$$$:   37-block 14
+    $$$$$:   37-block 15
+branch 26 never executed
+branch 27 never executed
+    $$$$$:   37-block 16
+call   28 never executed
+        2:   38:        return true;
+        2:   38-block  0
+       27:   39:    return false;
+       27:   39-block  0
+        -:   40:}
+        -:   41:
+function _ZN10Repository19findPositionOfMovieERK5Movie called 2 returned 100% blocks executed 59%
+        2:   42:int Repository::findPositionOfMovie(const Movie &movie) {
+        5:   43:    for (int i = 0; i < this->movies.getSize(); i++)
+        2:   43-block  0
+        3:   43-block  1
+        5:   43-block  2
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   44:        if (this->movies[i].getGenre() == movie.getGenre() && this->movies[i].getTitle() == movie.getTitle() && this->movies[i].getYear() == movie.getYear())
+        4:   44-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   44-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   44-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   44-block  3
+call    9 returned 4
+branch 10 taken 2 (fallthrough)
+branch 11 taken 2
+        2:   44-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   44-block  5
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   44-block  6
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:   44-block  7
+call   21 returned 2
+branch 22 taken 1 (fallthrough)
+branch 23 taken 1
+        1:   44-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   44-block  9
+call   27 returned 1
+call   28 returned 1
+branch 29 taken 1 (fallthrough)
+branch 30 taken 0
+        1:   44-block 10
+        3:   44-block 11
+        4:   44-block 12
+branch 31 taken 1 (fallthrough)
+branch 32 taken 3
+        1:   44-block 13
+call   33 returned 1
+        4:   44-block 14
+branch 34 taken 2 (fallthrough)
+branch 35 taken 2
+        2:   44-block 15
+call   36 returned 2
+        4:   44-block 16
+branch 37 taken 2 (fallthrough)
+branch 38 taken 2
+        2:   44-block 17
+call   39 returned 2
+        4:   44-block 18
+branch 40 taken 2 (fallthrough)
+branch 41 taken 2
+        2:   44-block 19
+call   42 returned 2
+        4:   44-block 20
+branch 43 taken 4 (fallthrough)
+branch 44 taken 0
+        4:   44-block 21
+call   45 returned 4
+        4:   44-block 22
+branch 46 taken 4 (fallthrough)
+branch 47 taken 0
+        4:   44-block 23
+call   48 returned 4
+        4:   44-block 24
+branch 49 taken 4 (fallthrough)
+branch 50 taken 0
+        4:   44-block 25
+call   51 returned 4
+        4:   44-block 26
+branch 52 taken 1 (fallthrough)
+branch 53 taken 3
+    $$$$$:   44-block 27
+branch 54 never executed
+branch 55 never executed
+    $$$$$:   44-block 28
+call   56 never executed
+    $$$$$:   44-block 29
+    $$$$$:   44-block 30
+branch 57 never executed
+branch 58 never executed
+    $$$$$:   44-block 31
+call   59 never executed
+    $$$$$:   44-block 32
+    $$$$$:   44-block 33
+branch 60 never executed
+branch 61 never executed
+    $$$$$:   44-block 34
+call   62 never executed
+    $$$$$:   44-block 35
+    $$$$$:   44-block 36
+branch 63 never executed
+branch 64 never executed
+    $$$$$:   44-block 37
+call   65 never executed
+    $$$$$:   44-block 38
+    $$$$$:   44-block 39
+branch 66 never executed
+branch 67 never executed
+    $$$$$:   44-block 40
+call   68 never executed
+    $$$$$:   44-block 41
+    $$$$$:   44-block 42
+branch 69 never executed
+branch 70 never executed
+    $$$$$:   44-block 43
+call   71 never executed
+    $$$$$:   44-block 44
+    $$$$$:   44-block 45
+branch 72 never executed
+branch 73 never executed
+    $$$$$:   44-block 46
+call   74 never executed
+        1:   45:            return i;
+        1:   45-block  0
+        1:   46:    return -1;
+        1:   46-block  0
+        -:   47:}
+        -:   48:
+function _ZN10RepositoryixEi called 5 returned 100% blocks executed 100%
+        5:   49:Movie Repository::operator[](int index) {
+        5:   50:    return this->movies[index];
+        5:   50-block  0
+call    0 returned 5
+        -:   51:}

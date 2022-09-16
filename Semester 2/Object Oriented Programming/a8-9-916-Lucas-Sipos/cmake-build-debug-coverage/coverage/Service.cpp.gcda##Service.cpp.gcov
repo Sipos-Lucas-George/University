@@ -1,0 +1,259 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Service/Service.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Service\Service.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Service.h"
+        -:    2:
+function _ZN7ServiceC2ERK10RepositoryP9WatchList called 1 returned 100% blocks executed 80%
+        1:    3:Service::Service(const Repository& repository, WatchList* watchList) {
+        1:    3-block  0
+call    0 returned 1
+        1:    4:    this->repository = repository;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    5:    this->watchList = watchList;
+        1:    6:}
+        1:    6-block  0
+    $$$$$:    6-block  1
+call    0 never executed
+        -:    7:
+function _ZN7ServiceD2Ev called 1 returned 100% blocks executed 100%
+        1:    8:Service::~Service() = default;
+        1:    8-block  0
+call    0 returned 1
+        -:    9:
+function _ZN7Service13addRepositoryERK5Movie called 1 returned 100% blocks executed 100%
+        1:   10:void Service::addRepository(const Movie &movie) {
+        1:   11:    this->repository.addMovie(movie);
+        1:   11-block  0
+call    0 returned 1
+        1:   12:}
+        -:   13:
+function _ZN7Service16deleteRepositoryEi called 2 returned 50% blocks executed 90%
+        2:   14:void Service::deleteRepository(int position) {
+        2:   15:    (position < 0 or position >= this->repository.getSize()) ? throw IncorrectPosition() : this->repository.deleteMovie(position);
+        2:   15-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   15-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   15-block  2
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   15-block  3
+call    9 returned 0
+        1:   15-block  4
+call   10 returned 1
+    $$$$$:   15-block  5
+call   11 never executed
+        1:   16:}
+        -:   17:
+function _ZN7Service16updateRepositoryEiRK5Movie called 2 returned 50% blocks executed 90%
+        2:   18:void Service::updateRepository(int position, const Movie& movie) {
+        2:   19:    (position < 0 or position >= this->repository.getSize()) ? throw IncorrectPosition() : this->repository.updateMovie(position, movie);
+        2:   19-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   19-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   19-block  2
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   19-block  3
+call    9 returned 0
+        1:   19-block  4
+call   10 returned 1
+    $$$$$:   19-block  5
+call   11 never executed
+        1:   20:}
+        -:   21:
+function _ZN7Service14incrementLikesEi called 1 returned 100% blocks executed 100%
+        1:   22:void Service::incrementLikes(int pos) {
+        1:   23:    this->repository[pos].incrementLikes();
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   24:}
+        -:   25:
+function _ZN7Service12addWatchListERK5Movie called 1 returned 100% blocks executed 100%
+        1:   26:int Service::addWatchList(const Movie &movie) {
+        1:   27:    return this->watchList->addMovie(movie);
+        1:   27-block  0
+call    0 returned 1
+        -:   28:}
+        -:   29:
+function _ZN7Service15deleteWatchListEi called 2 returned 100% blocks executed 100%
+        2:   30:int Service::deleteWatchList(int position) {
+        2:   31:    return (position < 0 or position >= this->watchList->getSize()) ? 0 : this->watchList->deleteMovieByPos(position);
+        2:   31-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   31-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   31-block  2
+call    5 returned 1
+        1:   31-block  3
+        2:   31-block  4
+        -:   32:}
+        -:   33:
+function _ZN7Service19filterMoviesByGenreERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 2 returned 100% blocks executed 68%
+        2:   34:WatchList* Service::filterMoviesByGenre(const std::string& genre, const std::string& type) {
+        2:   35:    std::vector<Movie> l;
+        2:   35-block  0
+call    0 returned 2
+        2:   36:    if (genre.empty())
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   37:        l = this->repository.getMovies();
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+call    4 returned 1
+        -:   38:    else {
+        2:   39:        for (const auto& i : this->repository.getMovies())
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+call    4 returned 1
+        1:   39-block  2
+call    5 returned 1
+        1:   39-block  3
+call    6 returned 1
+        2:   39-block  4
+call    7 returned 2
+branch  8 taken 1
+branch  9 taken 1 (fallthrough)
+        1:   40:            if (i.getGenre() == genre)
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        2:   41:                l.push_back(i);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+    $$$$$:   41-block  2
+call    4 never executed
+        -:   42:    }
+        -:   43:    WatchList* newWL;
+        2:   44:    if (type == "csv"){
+        2:   44-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   45:        newWL = new CSVWatchList();
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   45-block  2
+call    6 never executed
+        1:   46:        newWL->setType("csv");
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   46-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   46-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   46-block  3
+call    9 never executed
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+call   10 never executed
+    $$$$$:   46-block  6
+        -:   47:    }
+        -:   48:    else {
+        1:   49:        newWL = new HTMLWatchList();
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   49-block  2
+call    6 never executed
+        1:   50:        newWL->setType("html");
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   50-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   50-block  3
+call    9 never executed
+    $$$$$:   50-block  4
+    $$$$$:   50-block  5
+call   10 never executed
+    $$$$$:   50-block  6
+        -:   51:    }
+        2:   52:    newWL->setMovies(l);
+        2:   52-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   53:    return newWL;
+        2:   53-block  0
+        2:   54:}
+        2:   54-block  0
+call    0 returned 2
+    $$$$$:   54-block  1
+call    1 never executed
+        -:   55:
+function _ZN7Service13watchListSaveEv called 0 returned 0% blocks executed 0%
+    #####:   56:void Service::watchListSave()
+        -:   57:{
+    #####:   58:    this->watchList->saveToFile();
+    %%%%%:   58-block  0
+call    0 never executed
+    #####:   59:}
+        -:   60:
+function _ZN7Service13watchListOpenEv called 0 returned 0% blocks executed 0%
+    #####:   61:void Service::watchListOpen()
+        -:   62:{
+    #####:   63:    this->watchList->openInApp();
+    %%%%%:   63-block  0
+call    0 never executed
+    #####:   64:}

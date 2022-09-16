@@ -1,0 +1,161 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Service/Service.cpp
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Service.h"
+        -:    2:
+function _ZN7ServiceC2ERK10Repository called 2 returned 100% blocks executed 100%
+        2:    3:Service::Service(const Repository& repository) {
+        2:    3-block  0
+call    0 returned 2
+call    1 returned 2
+        2:    4:    this->repository = repository;
+        2:    5:}
+        -:    6:
+function _ZN7Service13addRepositoryERK5Movie called 8 returned 100% blocks executed 100%
+        8:    7:int Service::addRepository(const Movie &movie) {
+        8:    8:    return this->repository.addMovie(movie);
+        8:    8-block  0
+call    0 returned 8
+        -:    9:}
+        -:   10:
+function _ZN7Service16deleteRepositoryEi called 2 returned 100% blocks executed 100%
+        2:   11:int Service::deleteRepository(int position) {
+        2:   12:    if (position < 0 or position >= this->repository.getSize())
+        2:   12-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   12-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   12-block  2
+        1:   12-block  3
+        2:   12-block  4
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:   13:        return 0;
+        1:   13-block  0
+        1:   14:    return this->repository.deleteMovie(position);
+        1:   14-block  0
+call    0 returned 1
+        -:   15:}
+        -:   16:
+function _ZN7Service16updateRepositoryEiRK5Movie called 2 returned 100% blocks executed 100%
+        2:   17:int Service::updateRepository(int position, const Movie &movie) {
+        2:   18:    if (position < 0 or position >= this->repository.getSize())
+        2:   18-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   18-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   18-block  2
+        1:   18-block  3
+        2:   18-block  4
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:   19:        return 0;
+        1:   19-block  0
+        1:   20:    return this->repository.updateMovie(position, movie);
+        1:   20-block  0
+call    0 returned 1
+        -:   21:}
+        -:   22:
+function _ZN7Service12addWatchListERK5Movie called 2 returned 100% blocks executed 100%
+        2:   23:int Service::addWatchList(const Movie &movie) {
+        2:   24:    return this->watchList.addMovie(movie);
+        2:   24-block  0
+call    0 returned 2
+        -:   25:}
+        -:   26:
+function _ZN7Service15deleteWatchListEi called 2 returned 100% blocks executed 100%
+        2:   27:int Service::deleteWatchList(int position) {
+        2:   28:    if (position < 0 or position >= this->watchList.getSize())
+        2:   28-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   28-block  1
+call    2 returned 2
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   28-block  2
+        1:   28-block  3
+        2:   28-block  4
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:   29:        return 0;
+        1:   29-block  0
+        1:   30:    return this->watchList.deleteMovieByPos(position);
+        1:   30-block  0
+call    0 returned 1
+        -:   31:}
+        -:   32:
+function _ZN7Service19filterMoviesByGenreERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 78%
+        3:   33:WatchList Service::filterMoviesByGenre(const std::string& genre) {
+        3:   34:    WatchList l;
+        3:   34-block  0
+call    0 returned 3
+        3:   35:    if (genre.empty()) {
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        2:   36:        for (int i = 0; i < this->repository.getSize(); ++i)
+        1:   36-block  0
+        2:   36-block  1
+call    0 returned 2
+branch  1 taken 1
+branch  2 taken 1 (fallthrough)
+        1:   37:                l.addMovie(this->repository[i]);
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+    $$$$$:   37-block  2
+call    5 never executed
+    $$$$$:   37-block  3
+call    6 never executed
+        1:   38:        return l;
+        1:   38-block  0
+        -:   39:    }
+        4:   40:    for (int i = 0; i < this->repository.getSize(); ++i) {
+        2:   40-block  0
+        2:   40-block  1
+        4:   40-block  2
+call    0 returned 4
+branch  1 taken 2
+branch  2 taken 2 (fallthrough)
+        2:   41:        if (this->repository[i].getGenre() == genre)
+        2:   41-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   41-block  1
+call    4 returned 2
+call    5 returned 2
+call    6 returned 2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 1
+    $$$$$:   41-block  2
+call    9 never executed
+    $$$$$:   41-block  3
+call   10 never executed
+        1:   42:            l.addMovie(this->repository[i]);
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  1
+call    4 returned 1
+    $$$$$:   42-block  2
+call    5 never executed
+        -:   43:    }
+        2:   44:    return l;
+        2:   44-block  0
+        -:   45:}

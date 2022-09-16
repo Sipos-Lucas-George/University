@@ -1,0 +1,73 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Repository/WatchList.h
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <utility>
+        -:    3:#include <vector>
+        -:    4:#include <algorithm>
+        -:    5:#include <fstream>
+        -:    6:#include "../Domain/Movie.h"
+        -:    7:#include "../ExceptionsValidators/Exceptions.h"
+        -:    8:
+        -:    9:class WatchList {
+        -:   10:protected:
+        -:   11:    std::vector<Movie> movies;
+        -:   12:    int current{};
+        -:   13:    std::string type;
+        -:   14:
+        -:   15:public:
+        -:   16:    WatchList() = default;
+        -:   17:    ~WatchList();
+        -:   18:
+        -:   19:    // Check if the movie already exists, otherwise insert in the container
+        -:   20:    // Input: movie - Movie entity
+        -:   21:    // Output: 0 - error, 1 - otherwise
+        -:   22:    int addMovie(const Movie& movie);
+        -:   23:
+        -:   24:    // Check if the movie exists and remove it from the container
+        -:   25:    // Input: position - position to delete in DynamicVector
+        -:   26:    // Output: 0 - error, 1 - otherwise
+        -:   27:    int deleteMovieByPos(int position);
+        -:   28:
+        -:   29:    // delete movie by finding movie
+        -:   30:    void deleteMovie(Movie movie);
+        -:   31:
+        -:   32:    // play the current movie trailer
+        -:   33:    void play();
+        -:   34:
+        -:   35:    // play next current++ movie trailer
+        -:   36:    void next();
+        -:   37:
+        -:   38:    // get movie[current]
+        -:   39:    Movie& getCurrentMovie();
+        -:   40:
+        -:   41:    // Find a movie by title genre and year
+        -:   42:    // Input: title - movie title
+        -:   43:    //		  genre - movie genre
+        -:   44:    //		  year - movie year
+        -:   45:    // Output: true - find, false otherwise
+        -:   46:    bool search(const std::string& title, const std::string& genre, int year);
+        -:   47:
+        -:   48:    void setMovies(const std::vector<Movie>& newMovies);
+        -:   49:
+        -:   50:    // Return movie collection
+function _ZNK9WatchList9getMoviesEv called 1 returned 100% blocks executed 100%
+        1:   51:    std::vector<Movie> getMovies() const { return this->movies; }
+        1:   51-block  0
+call    0 returned 1
+        -:   52://    Movie& operator[](int index);
+        -:   53:
+function _ZN9WatchList7getSizeEv called 7 returned 100% blocks executed 100%
+        7:   54:    unsigned long long getSize() { return this->movies.size(); }
+        7:   54-block  0
+call    0 returned 7
+        -:   55:    void setType(const std::string& typeString) { this->type = typeString; }
+function _ZN9WatchList7getTypeB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   56:    std::string getType() { return this->type; }
+        1:   56-block  0
+call    0 returned 1
+        -:   57:
+        -:   58:    virtual void saveToFile() = 0;
+        -:   59:    virtual void openInApp() = 0;
+        -:   60:};

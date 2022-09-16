@@ -1,0 +1,3 @@
+"C:\XSSD Instalations\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\A5_6.dir/objects.a
+C:\XSSDIN~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\A5_6.dir/objects.a @CMakeFiles\A5_6.dir\objects1.rsp
+C:\XSSDIN~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE --coverage -g -Wl,--whole-archive CMakeFiles\A5_6.dir/objects.a -Wl,--no-whole-archive -o A5_6.exe -Wl,--out-implib,libA5_6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\A5_6.dir\linklibs.rsp

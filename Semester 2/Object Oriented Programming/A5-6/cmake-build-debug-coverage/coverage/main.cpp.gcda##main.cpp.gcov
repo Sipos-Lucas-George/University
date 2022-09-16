@@ -1,0 +1,42 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/main.cpp
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "UI/UI.h"
+        -:    2:#include "Tests/Tests.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 90%
+        1:    4:int main() {
+        1:    5:    Tests::testAll();
+        1:    5-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    6:    Repository repository{};
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    7:    Service service{ repository };
+        1:    7-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8:    UI ui{ service };
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:    8-block  2
+        1:    9:    ui.start();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    return 0;
+        1:   10-block  0
+        -:   11:}

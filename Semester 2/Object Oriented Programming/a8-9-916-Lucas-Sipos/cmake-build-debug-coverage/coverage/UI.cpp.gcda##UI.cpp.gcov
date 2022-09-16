@@ -1,0 +1,1439 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/UI/UI.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "UI.h"
+        -:    2:#include <iostream>
+        -:    3:#include <string>
+        -:    4:
+function _ZN2UIC2ER7Service called 0 returned 0% blocks executed 0%
+    #####:    5:UI::UI(Service &service) : service(service){
+    %%%%%:    5-block  0
+call    0 never executed
+    #####:    6:    this->service = service;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:    7:}
+    %%%%%:    7-block  0
+    $$$$$:    7-block  1
+call    0 never executed
+        -:    8:
+function _ZN2UID2Ev called 0 returned 0% blocks executed 0%
+    #####:    9:UI::~UI() = default;
+    %%%%%:    9-block  0
+call    0 never executed
+        -:   10:
+function _ZN2UI5startEv called 0 returned 0% blocks executed 0%
+    #####:   11:void UI::start() {
+        -:   12://    this->initialization();
+        -:   13:    while (true) {
+    #####:   14:        printStartMenu();
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   15:        std::string command;
+    %%%%%:   15-block  0
+call    0 never executed
+    #####:   16:        std::getline(std::cin, command);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   17:        if (command == "exit")
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:            break;
+    %%%%%:   18-block  0
+    #####:   19:        if (command == "admin"){
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:            system("cls");
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:            std::cout << "Now you are in Admin mode\n";
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   22:            runAdminMode();
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:            std::cout << "You are no more in Admin mode!\n";
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:            Sleep(1000);
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:            system("cls");
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   26:        }
+    #####:   27:        else if (command == "user"){
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   28:            system("cls");
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:            std::cout << "Now you are in User mode\n";
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:            runUserMode();
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:            std::cout << "You are no more in User mode!\n";
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:            Sleep(1000);
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:            system("cls");
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   34:        }
+        -:   35:        else
+    #####:   36:            std::cout << "Invalid command!\n";
+    %%%%%:   36-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   37:    }
+    %%%%%:   37-block  0
+    %%%%%:   37-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   37-block  2
+    $$$$$:   37-block  3
+call    3 never executed
+    #####:   38:}
+    %%%%%:   38-block  0
+        -:   39:
+function _ZN2UI12runAdminModeEv called 0 returned 0% blocks executed 0%
+    #####:   40:void UI::runAdminMode()
+        -:   41:{
+        -:   42:    while (true)
+        -:   43:    {
+    #####:   44:        printAdminMenu();
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:        std::string command;
+    %%%%%:   45-block  0
+call    0 never executed
+    #####:   46:        std::cout << ">> ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:        std::getline(std::cin, command);
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:        if (command == "exit")
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:            break;
+    %%%%%:   49-block  0
+    #####:   50:        else if (command == "add") {
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   51:            addMovieService();
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:            std::cout << '\n';
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   53:        }
+    #####:   54:        else if (command == "delete")
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   55:        {
+    #####:   56:            deleteMovieService();
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   57:            std::cout << '\n';
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   58:        }
+    #####:   59:        else if (command == "update")
+    %%%%%:   59-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   60:        {
+    #####:   61:            updateMovieService();
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:            std::cout << '\n';
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   63:        }
+    #####:   64:        else if (command == "list")
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   65:        {
+    #####:   66:            listAllMovies();
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:            std::cout << '\n';
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   68:        }
+        -:   69:        else
+    #####:   70:            std::cout << "Invalid command!\n\n";
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   71:    }
+    %%%%%:   71-block  0
+    %%%%%:   71-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   71-block  2
+    $$$$$:   71-block  3
+call    3 never executed
+    #####:   72:}
+    %%%%%:   72-block  0
+        -:   73:
+function _ZN2UI11runUserModeEv called 0 returned 0% blocks executed 0%
+    #####:   74:void UI::runUserMode()
+        -:   75:{
+        -:   76:    while (true)
+        -:   77:    {
+    #####:   78:        printUserMenu();
+    %%%%%:   78-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   79:        std::string command;
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:        std::cout << ">> ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   81:        std::getline(std::cin, command);
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   82:        if (command == "exit")
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   83:            break;
+    %%%%%:   83-block  0
+    #####:   84:        else if (command == "watch")
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   85:        {
+    #####:   86:            watchStart();
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   87:            std::cout << '\n';
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   88:        }
+    #####:   89:        else if (command == "show")
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   90:        {
+    #####:   91:            printWatchList();
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:            std::cout << '\n';
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   93:        }
+    #####:   94:        else if (command == "delete")
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   95:        {
+    #####:   96:            int var = userDelete();
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:            if (var == 0)
+    %%%%%:   97-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   98:                std::cout << "Error!!!\n";
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:            std::cout << '\n';
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  100:        }
+    #####:  101:        else if (command == "save")
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  102:        {
+    #####:  103:            this->service.watchListSave();
+    %%%%%:  103-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  104:        }
+    #####:  105:        else if (command == "open")
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  106:        {
+    #####:  107:            this->service.watchListOpen();
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  108:        }
+        -:  109:        else
+    #####:  110:            std::cout << "Invalid command!\n\n";
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  111:    }
+    %%%%%:  111-block  0
+    %%%%%:  111-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  111-block  2
+    $$$$$:  111-block  3
+call    3 never executed
+    #####:  112:}
+    %%%%%:  112-block  0
+        -:  113:
+function _ZN2UI15addMovieServiceEv called 0 returned 0% blocks executed 0%
+    #####:  114:void UI::addMovieService() {
+    #####:  115:    std::string title, genre, year, likes, trailer;
+    %%%%%:  115-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  116:    std::cout << "Enter title: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  117:    std::getline(std::cin, title);
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  118:    std::cout << "Enter genre: ";
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  119:    std::getline(std::cin, genre);
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  120:    std::cout << "Enter year: ";
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  121:    std::getline(std::cin, year);
+    %%%%%:  121-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  122:    std::cout << "Enter number of likes: ";
+    %%%%%:  122-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  123:    std::getline(std::cin, likes);
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  124:    std::cout << "Enter trailer link: ";
+    %%%%%:  124-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  125:    std::getline(std::cin, trailer);
+    %%%%%:  125-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  126:    try
+        -:  127:    {
+    #####:  128:        this->service.addRepository(Movie(title, genre, stoi(year), stoi(likes), trailer));
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  128-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  128-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  128-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  128-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  128-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  128-block  6
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  128-block  7
+call   21 never executed
+call   22 never executed
+call   23 never executed
+call   24 never executed
+    $$$$$:  128-block  8
+call   25 never executed
+    $$$$$:  128-block  9
+    $$$$$:  128-block 10
+call   26 never executed
+    $$$$$:  128-block 11
+    $$$$$:  128-block 12
+call   27 never executed
+    $$$$$:  128-block 13
+    $$$$$:  128-block 14
+call   28 never executed
+    $$$$$:  128-block 15
+        -:  129:    }
+    =====:  130:    catch (MovieException& e)
+    $$$$$:  130-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  130-block  1
+call    5 never executed
+        -:  131:    {
+    =====:  132:        for (const auto& string : e.getErrors())
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  132-block  0
+call    3 never executed
+call    4 never executed
+    $$$$$:  132-block  1
+call    5 never executed
+    $$$$$:  132-block  2
+call    6 never executed
+    $$$$$:  132-block  3
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    =====:  133:            std::cout << string;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  133-block  0
+call    3 never executed
+    $$$$$:  133-block  1
+call    4 never executed
+    =====:  134:    }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  134-block  0
+call    3 never executed
+    =====:  135:    catch (RepositoryException& e)
+    $$$$$:  135-block  0
+call    0 never executed
+        -:  136:    {
+    =====:  137:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  137-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  137-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  138:    }
+    $$$$$:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  138-block  1
+call    3 never executed
+    =====:  139:    catch (FileException& e)
+    $$$$$:  139-block  0
+call    0 never executed
+        -:  140:    {
+    =====:  141:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  141-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  141-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  142:    }
+    $$$$$:  142-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  142-block  1
+call    3 never executed
+    =====:  143:    catch (std::invalid_argument& e)
+    $$$$$:  143-block  0
+call    0 never executed
+        -:  144:    {
+    =====:  145:        std::cout << "Insert numbers\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  146:    }
+    $$$$$:  146-block  0
+call    0 never executed
+    $$$$$:  146-block  1
+call    1 never executed
+    #####:  147:}
+    %%%%%:  147-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    $$$$$:  147-block  1
+call    5 never executed
+    $$$$$:  147-block  2
+call    6 never executed
+    $$$$$:  147-block  3
+call    7 never executed
+    $$$$$:  147-block  4
+call    8 never executed
+    $$$$$:  147-block  5
+call    9 never executed
+        -:  148:
+function _ZN2UI18deleteMovieServiceEv called 0 returned 0% blocks executed 0%
+    #####:  149:void UI::deleteMovieService() {
+    #####:  150:    std::string position;
+    %%%%%:  150-block  0
+call    0 never executed
+    #####:  151:    std::cout << "Enter position: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  152:    std::getline(std::cin, position);
+    %%%%%:  152-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  153:    try
+        -:  154:    {
+    #####:  155:        this->service.deleteRepository(stoi(position));
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  155-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  156:    }
+    =====:  157:    catch (MovieException& e)
+    $$$$$:  157-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  157-block  1
+call    5 never executed
+        -:  158:    {
+    =====:  159:        for (const auto& string : e.getErrors())
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  159-block  0
+call    3 never executed
+call    4 never executed
+    $$$$$:  159-block  1
+call    5 never executed
+    $$$$$:  159-block  2
+call    6 never executed
+    $$$$$:  159-block  3
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    =====:  160:            std::cout << string;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  160-block  0
+call    3 never executed
+    $$$$$:  160-block  1
+call    4 never executed
+    =====:  161:    }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  161-block  0
+call    3 never executed
+    =====:  162:    catch (RepositoryException& e)
+    $$$$$:  162-block  0
+call    0 never executed
+        -:  163:    {
+    =====:  164:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  164-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  164-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  165:    }
+    $$$$$:  165-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  165-block  1
+call    3 never executed
+    =====:  166:    catch (FileException& e)
+    $$$$$:  166-block  0
+call    0 never executed
+        -:  167:    {
+    =====:  168:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  168-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  168-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  169:    }
+    $$$$$:  169-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  169-block  1
+call    3 never executed
+    =====:  170:    catch (std::invalid_argument& e)
+    $$$$$:  170-block  0
+call    0 never executed
+        -:  171:    {
+    =====:  172:        std::cout << "Insert numbers\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  173:    }
+    $$$$$:  173-block  0
+call    0 never executed
+    $$$$$:  173-block  1
+call    1 never executed
+    #####:  174:}
+    %%%%%:  174-block  0
+call    0 never executed
+    $$$$$:  174-block  1
+call    1 never executed
+        -:  175:
+function _ZN2UI18updateMovieServiceEv called 0 returned 0% blocks executed 0%
+    #####:  176:void UI::updateMovieService() {
+    #####:  177:    std::string position;
+    %%%%%:  177-block  0
+call    0 never executed
+    #####:  178:    std::cout << "Enter position: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  179:    std::getline(std::cin, position);
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  180:    std::string title, genre, year, likes, trailer;
+    %%%%%:  180-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:  181:    std::cout << "Enter title: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  182:    std::getline(std::cin, title);
+    %%%%%:  182-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  183:    std::cout << "Enter genre: ";
+    %%%%%:  183-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  184:    std::getline(std::cin, genre);
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  185:    std::cout << "Enter year: ";
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  186:    std::getline(std::cin, year);
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  187:    std::cout << "Enter number of likes: ";
+    %%%%%:  187-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  188:    std::getline(std::cin, likes);
+    %%%%%:  188-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  189:    std::cout << "Enter trailer link: ";
+    %%%%%:  189-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  190:    std::getline(std::cin, trailer);
+    %%%%%:  190-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  191:    try
+        -:  192:    {
+    #####:  193:        return this->service.updateRepository(stoi(position), Movie(title, genre, stoi(year), stoi(likes), trailer));
+    %%%%%:  193-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  193-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  193-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  193-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  193-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  193-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  193-block  6
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  193-block  7
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  193-block  8
+call   24 never executed
+call   25 never executed
+call   26 never executed
+call   27 never executed
+    $$$$$:  193-block  9
+call   28 never executed
+    $$$$$:  193-block 10
+    $$$$$:  193-block 11
+call   29 never executed
+    $$$$$:  193-block 12
+    $$$$$:  193-block 13
+call   30 never executed
+    $$$$$:  193-block 14
+    $$$$$:  193-block 15
+call   31 never executed
+    $$$$$:  193-block 16
+        -:  194:    }
+    =====:  195:    catch (MovieException& e)
+    $$$$$:  195-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  195-block  1
+call    5 never executed
+        -:  196:    {
+    =====:  197:        for (const auto& string : e.getErrors())
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  197-block  0
+call    3 never executed
+call    4 never executed
+    $$$$$:  197-block  1
+call    5 never executed
+    $$$$$:  197-block  2
+call    6 never executed
+    $$$$$:  197-block  3
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    =====:  198:            std::cout << string;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  198-block  0
+call    3 never executed
+    $$$$$:  198-block  1
+call    4 never executed
+    =====:  199:    }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  199-block  0
+call    3 never executed
+    =====:  200:    catch (RepositoryException& e)
+    $$$$$:  200-block  0
+call    0 never executed
+        -:  201:    {
+    =====:  202:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  202-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  202-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  203:    }
+    $$$$$:  203-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  203-block  1
+call    3 never executed
+    =====:  204:    catch (FileException& e)
+    $$$$$:  204-block  0
+call    0 never executed
+        -:  205:    {
+    =====:  206:        std::cout << e.what() << '\n';
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  206-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  206-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    =====:  207:    }
+    $$$$$:  207-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  207-block  1
+call    3 never executed
+    =====:  208:    catch (std::invalid_argument& e)
+    $$$$$:  208-block  0
+call    0 never executed
+        -:  209:    {
+    =====:  210:        std::cout << "Insert numbers\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  211:    }
+    $$$$$:  211-block  0
+call    0 never executed
+    $$$$$:  211-block  1
+call    1 never executed
+    #####:  212:}
+    $$$$$:  212-block  0
+    %%%%%:  212-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  212-block  2
+    %%%%%:  212-block  3
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  212-block  4
+    %%%%%:  212-block  5
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  212-block  6
+    %%%%%:  212-block  7
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  212-block  8
+    %%%%%:  212-block  9
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  212-block 10
+    %%%%%:  212-block 11
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    $$$$$:  212-block 12
+call   18 never executed
+    $$$$$:  212-block 13
+call   19 never executed
+    $$$$$:  212-block 14
+call   20 never executed
+    $$$$$:  212-block 15
+call   21 never executed
+    $$$$$:  212-block 16
+call   22 never executed
+    $$$$$:  212-block 17
+call   23 never executed
+        -:  213:
+function _ZN2UI13listAllMoviesEv called 0 returned 0% blocks executed 0%
+    #####:  214:void UI::listAllMovies() {
+    #####:  215:    std::vector<Movie> ls = this->service.getAllRepository();
+    %%%%%:  215-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  216:    int i = -1;
+function _ZZN2UI13listAllMoviesEvENKUl5MovieE_clES0_ called 0 returned 0% blocks executed 0%
+    #####:  217:    std::for_each(ls.begin(), ls.end(), [&i](Movie movie) { std::cout << "Movie " << ++i << movie.toString() << "\n\n"; });
+    %%%%%:  217-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  217-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  217-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  217-block  3
+call   14 never executed
+    $$$$$:  217-block  4
+call   15 never executed
+    #####:  218:}
+    %%%%%:  218-block  0
+call    0 never executed
+    $$$$$:  218-block  1
+call    1 never executed
+        -:  219:
+function _ZN2UI10watchStartEv called 0 returned 0% blocks executed 0%
+    #####:  220:void UI::watchStart() {
+    #####:  221:    std::cout << "Please insert the genre: ";
+    %%%%%:  221-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  222:    std::string genre;
+    %%%%%:  222-block  0
+call    0 never executed
+    #####:  223:    std::getline(std::cin, genre);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  224:    WatchList* ls = this->service.filterMoviesByGenre(genre, this->service.getType());
+    %%%%%:  224-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  224-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  224-block  2
+call    6 never executed
+    $$$$$:  224-block  3
+call    7 never executed
+    $$$$$:  224-block  4
+    #####:  225:    Movie movie;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  226:    std::string command;
+    %%%%%:  226-block  0
+call    0 never executed
+    #####:  227:    while(ls->getSize() != 0)
+    %%%%%:  227-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  228:    {
+    #####:  229:        printWatchMenu();
+    %%%%%:  229-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  230:        ls->play();
+    %%%%%:  230-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  231:        movie = ls->getCurrentMovie();
+    %%%%%:  231-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  231-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  232:        std::cout << movie.toString() << "\n>> ";
+    %%%%%:  232-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  232-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  232-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  232-block  3
+call    9 never executed
+    $$$$$:  232-block  4
+call   10 never executed
+    $$$$$:  232-block  5
+    #####:  233:        std::getline(std::cin, command);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  234:        if (command == "exit")
+    %%%%%:  234-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  235:            break;
+    %%%%%:  235-block  0
+    #####:  236:        else if (command == "add")
+    %%%%%:  236-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  237:        {
+    #####:  238:            this->service.addWatchList(movie);
+    %%%%%:  238-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  239:            ls->deleteMovie(movie);
+    %%%%%:  239-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  239-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  239-block  2
+call    6 never executed
+    $$$$$:  239-block  3
+call    7 never executed
+    $$$$$:  239-block  4
+        -:  240:        }
+    #####:  241:        else if (command == "next")
+    %%%%%:  241-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  242:            ls->next();
+    %%%%%:  242-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  243:    }
+    #####:  244:    if (ls->getSize() == 0)
+    %%%%%:  244-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  245:        std::cout << "There are no movies!\n";
+    %%%%%:  245-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  246:
+    #####:  247:}
+    %%%%%:  247-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:  247-block  1
+call    3 never executed
+    $$$$$:  247-block  2
+call    4 never executed
+    $$$$$:  247-block  3
+call    5 never executed
+        -:  248:
+function _ZN2UI14printWatchListEv called 0 returned 0% blocks executed 0%
+    #####:  249:void UI::printWatchList() {
+    #####:  250:    std::vector<Movie> ls = this->service.getAllWatchList();
+    %%%%%:  250-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  251:    int i = -1;
+function _ZZN2UI14printWatchListEvENKUl5MovieE_clES0_ called 0 returned 0% blocks executed 0%
+    #####:  252:    std::for_each(ls.begin(), ls.end(), [&i](Movie movie) { std::cout << "Movie " << ++i << movie.toString() << "\n\n"; });
+    %%%%%:  252-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  252-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  252-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:  252-block  3
+call   14 never executed
+    $$$$$:  252-block  4
+call   15 never executed
+    #####:  253:}
+    %%%%%:  253-block  0
+call    0 never executed
+    $$$$$:  253-block  1
+call    1 never executed
+        -:  254:
+function _ZN2UI10userDeleteEv called 0 returned 0% blocks executed 0%
+    #####:  255:int UI::userDelete() {
+    #####:  256:    std::string position, like;
+    %%%%%:  256-block  0
+call    0 never executed
+call    1 never executed
+        -:  257:    int pos;
+    #####:  258:    std::cout << "Enter the position: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  259:    std::getline(std::cin, position);
+    %%%%%:  259-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  260:    std::cout << "Did you like the movie? yes/no: ";
+    %%%%%:  260-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  261:    std::getline(std::cin, like);
+    %%%%%:  261-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  262:    if (!verifyPositionType(position))
+    %%%%%:  262-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  262-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  263:        return 0;
+    %%%%%:  263-block  0
+    #####:  264:    pos = stoi(position);
+    %%%%%:  264-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  265:    if (pos < 0 || pos >= this->service.getAllWatchList().size())
+    %%%%%:  265-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  265-block  1
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  265-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  265-block  3
+    %%%%%:  265-block  4
+    %%%%%:  265-block  5
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  265-block  6
+call   10 never executed
+    %%%%%:  265-block  7
+branch 11 never executed
+branch 12 never executed
+    $$$$$:  265-block  8
+branch 13 never executed
+branch 14 never executed
+    $$$$$:  265-block  9
+call   15 never executed
+    $$$$$:  265-block 10
+    #####:  266:        return 0;
+    %%%%%:  266-block  0
+    #####:  267:    if (like == "yes" || like == "y")
+    %%%%%:  267-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  267-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  267-block  2
+    %%%%%:  267-block  3
+    %%%%%:  267-block  4
+branch  6 never executed
+branch  7 never executed
+    #####:  268:        this->service.incrementLikes(pos);
+    %%%%%:  268-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  269:    return this->service.deleteWatchList(pos);
+    %%%%%:  269-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  269-block  1
+    #####:  270:}
+    %%%%%:  270-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  270-block  1
+call    2 never executed
+    $$$$$:  270-block  2
+call    3 never executed
+        -:  271:
+function _ZN2UI14printStartMenuEv called 0 returned 0% blocks executed 0%
+    #####:  272:void UI::printStartMenu() {
+    #####:  273:    std::cout << "(Enter exit to shut down the program!)\n";
+    %%%%%:  273-block  0
+call    0 never executed
+    #####:  274:    std::cout << "Please select your mode: admin / user\n";
+call    0 never executed
+    #####:  275:    std::cout << "Mode: ";
+call    0 never executed
+    #####:  276:}
+        -:  277:
+function _ZN2UI14printAdminMenuEv called 0 returned 0% blocks executed 0%
+    #####:  278:void UI::printAdminMenu() {
+    #####:  279:    std::cout << "add - Add a movie\n";
+    %%%%%:  279-block  0
+call    0 never executed
+    #####:  280:    std::cout << "delete - Delete a movie\n";
+call    0 never executed
+    #####:  281:    std::cout << "update - Update a movie\n";
+call    0 never executed
+    #####:  282:    std::cout << "list - List all movies\n";
+call    0 never executed
+    #####:  283:    std::cout << "exit - exit admin mode\n\n";
+call    0 never executed
+    #####:  284:}
+        -:  285:
+function _ZN2UI13printUserMenuEv called 0 returned 0% blocks executed 0%
+    #####:  286:void UI::printUserMenu() {
+    #####:  287:    std::cout << "watch - See the movies by genre\n";
+    %%%%%:  287-block  0
+call    0 never executed
+    #####:  288:    std::cout << "delete - Delete Movie from the WatchList by title\n";
+call    0 never executed
+    #####:  289:    std::cout << "show - See the WatchList\n";
+call    0 never executed
+    #####:  290:    std::cout << "save - Save the WatchList\n";
+call    0 never executed
+    #####:  291:    std::cout << "open - Open csv/html the WatchList\n";
+call    0 never executed
+    #####:  292:    std::cout << "exit - exit user mode\n\n";
+call    0 never executed
+    #####:  293:}
+        -:  294:
+function _ZN2UI14printWatchMenuEv called 0 returned 0% blocks executed 0%
+    #####:  295:void UI::printWatchMenu() {
+    #####:  296:    std::cout << "You can: \n";
+    %%%%%:  296-block  0
+call    0 never executed
+    #####:  297:    std::cout << "next - go to the next element\n";
+call    0 never executed
+    #####:  298:    std::cout << "add - add to the WatchList\n";
+call    0 never executed
+    #####:  299:    std::cout << "exit - to exit\n";
+call    0 never executed
+    #####:  300:}
+        -:  301:
+function _ZN2UI18verifyPositionTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  302:bool UI::verifyPositionType(const std::string& position) {
+    #####:  303:    std::string numbers = "1234567890";
+    %%%%%:  303-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  303-block  1
+    #####:  304:    if (position.empty())
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  305:        return false;
+    %%%%%:  305-block  0
+function _ZZN2UI18verifyPositionTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlcE_clEc called 0 returned 0% blocks executed 0%
+    #####:  306:    if (std::all_of(position.begin(), position.end(), [](char i) { return std::isdigit(i); }))
+    %%%%%:  306-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  306-block  1
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  306-block  2
+    #####:  307:        return true;
+    %%%%%:  307-block  0
+    #####:  308:    return false;
+    %%%%%:  308-block  0
+    #####:  309:}
+    %%%%%:  309-block  0
+call    0 never executed
+    $$$$$:  309-block  1
+call    1 never executed
+        -:  310:
+        -:  311://void UI::initialization() {
+        -:  312://    Movie m = Movie("Bad Boys", "Action", 1995, 17796764, "https://www.youtube.com/watch?v=OLYENHi4IIc");
+        -:  313://    this->service.addRepository(m);
+        -:  314://    m = Movie("Harry Potter: Philosopher's Stone", "Fantasy", 2001, 921634, "https://www.youtube.com/watch?v=mNgwNXKBEW0");
+        -:  315://    this->service.addRepository(m);
+        -:  316://    m = Movie("Ride Along", "Comedy", 2014, 1345887, "https://www.youtube.com/watch?v=5klp6rkHIks");
+        -:  317://    this->service.addRepository(m);
+        -:  318://    m = Movie("American Sniper", "Action", 2014, 350230, "https://www.youtube.com/watch?v=99k3u9ay1gs");
+        -:  319://    this->service.addRepository(m);
+        -:  320://    m = Movie("Beauty and the Beast", "Romance", 2017, 79791, "https://www.youtube.com/watch?v=e3Nl_TCQXuw");
+        -:  321://    this->service.addRepository(m);
+        -:  322://    m = Movie("Minions", "Animation", 2015, 157889, "https://www.youtube.com/watch?v=SvKmSNxFHyQ");
+        -:  323://    this->service.addRepository(m);
+        -:  324://    m = Movie("Frozen", "Animation", 2013, 448325, "https://www.youtube.com/watch?v=TbQm5doF_Uc");
+        -:  325://    this->service.addRepository(m);
+        -:  326://}

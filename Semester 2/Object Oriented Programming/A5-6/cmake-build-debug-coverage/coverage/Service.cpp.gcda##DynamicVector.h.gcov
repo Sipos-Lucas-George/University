@@ -1,0 +1,127 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Repository/DynamicVector.h
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Service\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#define RESIZE 2
+        -:    3:
+        -:    4:template<typename T>
+        -:    5:class DynamicVector {
+        -:    6:private:
+        -:    7:    T* elements;
+        -:    8:    int size{};
+        -:    9:    int capacity{};
+        -:   10:
+        -:   11:public:
+        -:   12:    // default constructor for DynamicVector
+        -:   13:    explicit DynamicVector(int capacity = 10);
+        -:   14:
+        -:   15:    // copy constructor for a DynamicVector
+        -:   16:    DynamicVector(const DynamicVector<T>& vector);
+        -:   17:
+        -:   18:    // destructor for DynamicVector
+        -:   19://    ~DynamicVector();
+        -:   20:
+        -:   21:    // add an element to the current DynamicVector
+        -:   22:    void addItem(const T& element);
+        -:   23:
+        -:   24:    // delete an element from the current DynamicVector
+        -:   25:    void deleteItem(int position);
+        -:   26:
+        -:   27:    // update an element on a given position from the current DynamicVector
+        -:   28:    void updateItem(int position, T element);
+        -:   29:
+        -:   30:    // resize the current DynamicVector
+        -:   31:    void resize();
+        -:   32:
+        -:   33:    T operator[](int index);
+function _ZNK13DynamicVectorI5MovieE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:   34:    int getSize() const { return this->size; }
+    %%%%%:   34-block  0
+        -:   35:    int getCapacity() const { return this->capacity; }
+        -:   36:    T getElement(const int position) const { return this->elements[position]; }
+        -:   37:};
+        -:   38:
+        -:   39:template<typename T>
+function _ZN13DynamicVectorI5MovieEC1Ei called 0 returned 0% blocks executed 0%
+    #####:   40:DynamicVector<T>::DynamicVector(int capacity) {
+    #####:   41:    this->size = 0;
+    #####:   42:    this->capacity = capacity;
+    #####:   43:    this->elements = new T[capacity];
+    %%%%%:   43-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   43-block  1
+    %%%%%:   43-block  2
+    %%%%%:   43-block  3
+call    2 never executed
+    %%%%%:   43-block  4
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   43-block  5
+    %%%%%:   43-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   43-block  7
+    $$$$$:   43-block  8
+call    8 never executed
+    $$$$$:   43-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   43-block 10
+    $$$$$:   43-block 11
+    $$$$$:   43-block 12
+call   11 never executed
+    #####:   44:}
+    %%%%%:   44-block  0
+        -:   45:
+        -:   46:template<typename T>
+        -:   47:DynamicVector<T>::DynamicVector(const DynamicVector<T> &vector) {
+        -:   48:    this->size = vector.getSize();
+        -:   49:    this->capacity = vector.getCapacity();
+        -:   50:    this->elements = new T[this->capacity];
+        -:   51:    for (int i = 0; i < this->size; ++i)
+        -:   52:        this->elements[i] = vector.getElement(i);
+        -:   53:}
+        -:   54:
+        -:   55://template<typename T>
+        -:   56://DynamicVector<T>::~DynamicVector() {
+        -:   57://    delete[] this->elements;
+        -:   58://}
+        -:   59:
+        -:   60:template<typename T>
+        -:   61:void DynamicVector<T>::addItem(const T &element) {
+        -:   62:    if (this->size == this->capacity)
+        -:   63:        this->resize();
+        -:   64:    this->elements[this->size++] = element;
+        -:   65:}
+        -:   66:
+        -:   67:template<typename T>
+        -:   68:void DynamicVector<T>::deleteItem(int position) {
+        -:   69:    for (int i = position; i < this->size - 1; ++i)
+        -:   70:        this->elements[i] = this->elements[i + 1];
+        -:   71:    --this->size;
+        -:   72:}
+        -:   73:
+        -:   74:template<typename T>
+        -:   75:void DynamicVector<T>::updateItem(int position, T element) {
+        -:   76:    this->elements[position] = element;
+        -:   77:}
+        -:   78:
+        -:   79:template<typename T>
+        -:   80:void DynamicVector<T>::resize() {
+        -:   81:    this->capacity *= RESIZE;
+        -:   82:
+        -:   83:    auto* els = new T[this->capacity];
+        -:   84:    for (int i = 0; i < this->size; ++i)
+        -:   85:        els[i] = this->elements[i];
+        -:   86:
+        -:   87:    delete[] this->elements;
+        -:   88:    this->elements = els;
+        -:   89:}
+        -:   90:
+        -:   91:template<typename T>
+        -:   92:T DynamicVector<T>::operator[](int index) {
+        -:   93:    return this->elements[index];
+        -:   94:}

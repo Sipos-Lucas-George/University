@@ -1,0 +1,5 @@
+D:/CLion/e916-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/CLion/e916-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/e916-916-Lucas-Sipos-1.dir
+D:/CLion/e916-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CLion/e916-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/e916-916-Lucas-Sipos-1_autogen_timestamp_deps.dir
+D:/CLion/e916-916-Lucas-Sipos-1/cmake-build-debug/CMakeFiles/e916-916-Lucas-Sipos-1_autogen.dir

@@ -1,0 +1,6 @@
+4,Mi foame!!!,Lucas
+1,Ce sa fac azi?,Lucas
+2,Doamne ajuta!,Stan
+3,La masa,Andrei
+5,Serus,Andrei
+6,Ok?,Lucas

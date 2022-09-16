@@ -1,0 +1,10 @@
+# ninja log v5
+3	391	6737389142650508	build.ninja	924f95e1eb155d95
+4	613	6712208223578375	CMakeFiles/a8-9-916-Lucas-Sipos.dir/main.cpp.obj	c3beabbae034897b
+4	706	6712180666375178	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/WatchList.cpp.obj	5a5973d4f74b370e
+18	2517	6712122274319985	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Domain/Movie.cpp.obj	785aef23a9de2a5d
+4	1856	6712197277041644	CMakeFiles/a8-9-916-Lucas-Sipos.dir/UI/UI.cpp.obj	189b74cedb43b044
+34	779	6712195792191785	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Service/Service.cpp.obj	a4ebef772a825ce7
+28	218	6712137976418797	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Tests/Tests.cpp.obj	7b904d81193e971f
+5	673	6712144407978160	CMakeFiles/a8-9-916-Lucas-Sipos.dir/Repository/Repository.cpp.obj	6b0f0fdb68bf3df2
+613	893	6712208226408361	a8-9-916-Lucas-Sipos.exe	80774f224f11256

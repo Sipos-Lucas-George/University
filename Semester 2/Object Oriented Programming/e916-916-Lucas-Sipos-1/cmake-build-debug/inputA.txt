@@ -1,0 +1,6 @@
+3,3,Lucas,Haide!,500
+5,4,Andrei,Same!,380
+4,4,Stan,Si mie!,234
+2,1,Andrei,Qbt,30
+1,2,Lucas,Sa fie cu noroc,20
+6,4,Andrei,Ok,0

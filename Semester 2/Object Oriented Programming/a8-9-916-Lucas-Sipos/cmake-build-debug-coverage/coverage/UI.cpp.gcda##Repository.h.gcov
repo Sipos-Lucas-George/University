@@ -1,0 +1,54 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Repository/Repository.h
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\UI\UI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <vector>
+        -:    3:#include <algorithm>
+        -:    4:#include <fstream>
+        -:    5:#include "../Domain/Movie.h"
+        -:    6:#include "../ExceptionsValidators/Exceptions.h"
+        -:    7:
+        -:    8:class Repository {
+        -:    9:private:
+        -:   10:    std::vector<Movie> movies;
+        -:   11:    std::string filename;
+        -:   12:
+        -:   13:public:
+        -:   14:    Repository() = default;
+        -:   15:    explicit Repository(std::string);
+        -:   16:    ~Repository();
+        -:   17:
+        -:   18:    // Check if the movie already exists, otherwise insert in the container
+        -:   19:    // Input: movie - Movie entity
+        -:   20:    void addMovie(const Movie& movie);
+        -:   21:
+        -:   22:    // Check if the movie exists and remove it from the container
+        -:   23:    // Input: position - position to delete in DynamicVector
+        -:   24:    void deleteMovie(int position);
+        -:   25:
+        -:   26:    // Check if the movie exists and update with the new Movie entity
+        -:   27:    // Input: position - position to update
+        -:   28:    //        movie - new Movie entity
+        -:   29:    void updateMovie(int position, const Movie& movie);
+        -:   30:
+        -:   31:    // Find a movie by title genre and year
+        -:   32:    // Input: title - movie title
+        -:   33:    //		  genre - movie genre
+        -:   34:    //		  year - movie year
+        -:   35:    // Output: true - find, false otherwise
+        -:   36:    bool search(const std::string& title, const std::string& genre, int year);
+        -:   37:
+        -:   38:    // Return movie collection
+function _ZNK10Repository9getMoviesEv called 4 returned 100% blocks executed 100%
+        4:   39:    std::vector<Movie> getMovies() const { return this->movies; }
+        4:   39-block  0
+call    0 returned 4
+        -:   40:    unsigned long long getSize(){ return this->movies.size(); }
+        -:   41:    std::string getFileName() { return this->filename; }
+        -:   42:    Movie& operator[](int index);
+        -:   43:
+        -:   44:private:
+        -:   45:    void readFromFile();
+        -:   46:    void writeToFile();
+        -:   47:};

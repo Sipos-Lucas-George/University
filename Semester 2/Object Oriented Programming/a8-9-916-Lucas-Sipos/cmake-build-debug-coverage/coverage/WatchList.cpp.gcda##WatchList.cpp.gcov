@@ -1,0 +1,277 @@
+        -:    0:Source:D:/CLion/a8-9-916-Lucas-Sipos/Repository/WatchList.cpp
+        -:    0:Graph:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Repository\WatchList.cpp.gcno
+        -:    0:Data:D:\CLion\a8-9-916-Lucas-Sipos\cmake-build-debug-coverage\CMakeFiles\a8-9-916-Lucas-Sipos.dir\Repository\WatchList.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "WatchList.h"
+        -:    2:
+function _ZN9WatchListD2Ev called 0 returned 0% blocks executed 0%
+    #####:    3:WatchList::~WatchList() = default;
+    %%%%%:    3-block  0
+call    0 never executed
+call    1 never executed
+        -:    4:
+function _ZN9WatchList8addMovieERK5Movie called 5 returned 100% blocks executed 71%
+        5:    5:int WatchList::addMovie(const Movie& movie) {
+        5:    6:    if (this->search(movie.getTitle(), movie.getGenre(), movie.getYear()))
+        5:    6-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+branch  3 taken 5 (fallthrough)
+branch  4 taken 0 (throw)
+        5:    6-block  1
+call    5 returned 5
+branch  6 taken 5 (fallthrough)
+branch  7 taken 0 (throw)
+        5:    6-block  2
+call    8 returned 5
+call    9 returned 5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 4
+    $$$$$:    6-block  3
+call   12 never executed
+    $$$$$:    6-block  4
+    $$$$$:    6-block  5
+call   13 never executed
+        1:    7:        return 0;
+        1:    7-block  0
+        4:    8:    this->movies.push_back(movie);
+        4:    8-block  0
+call    0 returned 4
+        4:    9:    return 1;
+        -:   10:}
+        -:   11:
+function _ZN9WatchList16deleteMovieByPosEi called 5 returned 100% blocks executed 78%
+        5:   12:int WatchList::deleteMovieByPos(int position) {
+        5:   13:    this->movies.erase(this->movies.begin()+position);
+        5:   13-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   13-block  1
+    $$$$$:   13-block  2
+        5:   14:    return 1;
+        5:   14-block  0
+        5:   14-block  1
+        -:   15:}
+        -:   16:
+function _ZN9WatchList11deleteMovieE5Movie called 1 returned 100% blocks executed 100%
+        1:   17:void WatchList::deleteMovie(Movie movie) {
+        1:   18:    int pos, iteratorPosition = -1;
+function _ZZN9WatchList11deleteMovieE5MovieENKUlRKS0_E_clES2_ called 2 returned 100% blocks executed 62%
+        3:   19:    std::for_each(this->movies.begin(), this->movies.end(), [&](const Movie& m) { ++iteratorPosition; if (m.getTitle() == movie.getTitle() && m.getGenre() == movie.getGenre() && m.getYear() == movie.getYear()) pos = iteratorPosition; });
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   19-block  1
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        2:   19-block  2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:   19-block  3
+call   11 returned 2
+branch 12 taken 1 (fallthrough)
+branch 13 taken 1
+        1:   19-block  4
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:   19-block  5
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   19-block  6
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:   19-block  7
+call   23 returned 1
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:   19-block  8
+        1:   19-block  9
+        2:   19-block 10
+branch 27 taken 1 (fallthrough)
+branch 28 taken 1
+        1:   19-block 11
+call   29 returned 1
+        2:   19-block 12
+branch 30 taken 1 (fallthrough)
+branch 31 taken 1
+        1:   19-block 13
+call   32 returned 1
+        2:   19-block 14
+branch 33 taken 2 (fallthrough)
+branch 34 taken 0
+        2:   19-block 15
+call   35 returned 2
+        2:   19-block 16
+branch 36 taken 2 (fallthrough)
+branch 37 taken 0
+        2:   19-block 17
+call   38 returned 2
+        2:   19-block 18
+branch 39 taken 1 (fallthrough)
+branch 40 taken 1
+        1:   19-block 19
+        2:   19-block 20
+    $$$$$:   19-block 21
+branch 41 never executed
+branch 42 never executed
+    $$$$$:   19-block 22
+call   43 never executed
+    $$$$$:   19-block 23
+    $$$$$:   19-block 24
+branch 44 never executed
+branch 45 never executed
+    $$$$$:   19-block 25
+call   46 never executed
+    $$$$$:   19-block 26
+    $$$$$:   19-block 27
+branch 47 never executed
+branch 48 never executed
+    $$$$$:   19-block 28
+call   49 never executed
+    $$$$$:   19-block 29
+    $$$$$:   19-block 30
+branch 50 never executed
+branch 51 never executed
+    $$$$$:   19-block 31
+call   52 never executed
+        1:   20:    this->deleteMovieByPos(pos);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:}
+        1:   21-block  0
+        -:   22:
+function _ZN9WatchList4playEv called 0 returned 0% blocks executed 0%
+    #####:   23:void WatchList::play() {
+    #####:   24:    this->movies[this->current].playTrailer();
+    %%%%%:   24-block  0
+call    0 never executed
+call    1 never executed
+    #####:   25:}
+        -:   26:
+function _ZN9WatchList4nextEv called 4 returned 100% blocks executed 100%
+        4:   27:void WatchList::next() {
+        4:   28:    if (this->current + 1 == this->movies.size())
+        4:   28-block  0
+call    0 returned 4
+branch  1 taken 2 (fallthrough)
+branch  2 taken 2
+        -:   29:    {
+        2:   30:        this->current = 0;
+        2:   31:        return;
+        2:   31-block  0
+        -:   32:    }
+        2:   33:    this->current++;
+        2:   33-block  0
+        -:   34:}
+        -:   35:
+function _ZN9WatchList15getCurrentMovieEv called 7 returned 100% blocks executed 100%
+        7:   36:Movie& WatchList::getCurrentMovie() {
+        7:   37:    return this->movies[current];
+        7:   37-block  0
+call    0 returned 7
+        -:   38:}
+        -:   39:
+function _ZN9WatchList6searchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_i called 5 returned 100% blocks executed 77%
+        5:   40:bool WatchList::search(const std::string& title, const std::string& genre, int year) {
+        5:   41:    bool returnValue = false;
+function _ZZN9WatchList6searchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_iENKUlRK5MovieE_clESA_ called 3 returned 100% blocks executed 72%
+        5:   42:    std::for_each(this->movies.begin(), this->movies.end(), [=, &returnValue](const Movie& movie) {
+        5:   42-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   42-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   42-block  2
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+branch  9 taken 5 (fallthrough)
+branch 10 taken 0 (throw)
+        5:   42-block  3
+call   11 returned 5
+call   12 returned 5
+    $$$$$:   42-block  4
+call   13 never executed
+    $$$$$:   42-block  5
+        3:   43:        if (movie.getTitle() == title && movie.getGenre() == genre && movie.getYear() == year) returnValue = true;});
+        3:   43-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   43-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2
+        1:   43-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   43-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   43-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   43-block  5
+        2:   43-block  6
+        3:   43-block  7
+branch 15 taken 1 (fallthrough)
+branch 16 taken 2
+        1:   43-block  8
+call   17 returned 1
+        3:   43-block  9
+branch 18 taken 3 (fallthrough)
+branch 19 taken 0
+        3:   43-block 10
+call   20 returned 3
+        3:   43-block 11
+branch 21 taken 1 (fallthrough)
+branch 22 taken 2
+        1:   43-block 12
+        3:   43-block 13
+    $$$$$:   43-block 14
+branch 23 never executed
+branch 24 never executed
+    $$$$$:   43-block 15
+call   25 never executed
+    $$$$$:   43-block 16
+    $$$$$:   43-block 17
+branch 26 never executed
+branch 27 never executed
+    $$$$$:   43-block 18
+call   28 never executed
+        5:   44:    return returnValue;
+        5:   44-block  0
+        -:   45:}
+        -:   46:
+        -:   47://Movie& WatchList::operator[](int index) {
+        -:   48://    return this->movies[index];
+        -:   49://}
+        -:   50:
+function _ZN9WatchList9setMoviesERKSt6vectorI5MovieSaIS1_EE called 3 returned 100% blocks executed 100%
+        3:   51:void WatchList::setMovies(const std::vector<Movie>& newMovies) {
+        3:   52:    this->movies = newMovies;
+        3:   52-block  0
+call    0 returned 3
+        3:   53:}

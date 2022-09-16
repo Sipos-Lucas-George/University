@@ -1,0 +1,160 @@
+        -:    0:Source:D:/CLion/A5-6(2.0)/Domain/Movie.cpp
+        -:    0:Graph:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Domain\Movie.cpp.gcno
+        -:    0:Data:D:\CLion\A5-6(2.0)\cmake-build-debug-coverage\CMakeFiles\A5_6.dir\Domain\Movie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Movie.h"
+        -:    2:#include <Windows.h>
+        -:    3:#include <shellapi.h>
+        -:    4:#include <utility>
+        -:    5:
+function _ZN5MovieC2Ev called 214 returned 100% blocks executed 100%
+      214:    6:Movie::Movie()  : year(0), likes(0), ifLiked(0){}
+      214:    6-block  0
+call    0 returned 214
+call    1 returned 214
+call    2 returned 214
+        -:    7:
+function _ZN5MovieC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_iiS5_ called 32 returned 100% blocks executed 100%
+       32:    8:Movie::Movie(std::string title, std::string genre, int year, int likes, std::string trailer) {
+       32:    8-block  0
+call    0 returned 32
+call    1 returned 32
+call    2 returned 32
+       32:    9:    this->title = std::move(title);
+call    0 returned 32
+call    1 returned 32
+       32:   10:    this->genre = std::move(genre);
+call    0 returned 32
+call    1 returned 32
+       32:   11:    this->year = year;
+       32:   12:    this->likes = likes;
+       32:   13:    this->trailer = std::move(trailer);
+call    0 returned 32
+call    1 returned 32
+       32:   14:    this->ifLiked = 0;
+       32:   15:}
+        -:   16:
+function _ZN5Movie14incrementLikesEv called 2 returned 100% blocks executed 100%
+        2:   17:void Movie::incrementLikes() {
+        2:   18:    if (this->ifLiked == 0) {
+        2:   18-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   19:        this->ifLiked = 1;
+        1:   20:        ++this->likes;
+        1:   20-block  0
+        -:   21:    }
+        2:   22:}
+        -:   23:
+function _ZNK5Movie11playTrailerEv called 0 returned 0% blocks executed 0%
+    #####:   24:void Movie::playTrailer() const {
+    #####:   25:    ShellExecuteA(nullptr, nullptr, "chrome.exe", this->getTrailer().c_str(), nullptr, SW_SHOWMAXIMIZED);
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   25-block  1
+call    5 never executed
+    $$$$$:   25-block  2
+call    6 never executed
+    #####:   26:}
+        -:   27:
+function _ZN5Movie8toStringB5cxx11Ev called 2 returned 100% blocks executed 47%
+        2:   28:std::string Movie::toString() {
+        2:   29:    std::string str;
+        2:   29-block  0
+call    0 returned 2
+        2:   30:    str = "\tTitle: " + this->title + " Genre: " + this->genre + " Year: " + std::to_string(this->year) + " Likes: " + std::to_string(this->likes) + "\n\tTrailer: " + this->trailer;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   30-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   30-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   30-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   30-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   30-block  4
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   30-block  5
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:   30-block  6
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:   30-block  7
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:   30-block  8
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:   30-block  9
+call   30 returned 2
+branch 31 taken 2 (fallthrough)
+branch 32 taken 0 (throw)
+        2:   30-block 10
+call   33 returned 2
+call   34 returned 2
+call   35 returned 2
+call   36 returned 2
+call   37 returned 2
+call   38 returned 2
+call   39 returned 2
+call   40 returned 2
+call   41 returned 2
+call   42 returned 2
+call   43 returned 2
+call   44 returned 2
+    $$$$$:   30-block 11
+call   45 never executed
+    $$$$$:   30-block 12
+    $$$$$:   30-block 13
+call   46 never executed
+    $$$$$:   30-block 14
+    $$$$$:   30-block 15
+call   47 never executed
+    $$$$$:   30-block 16
+    $$$$$:   30-block 17
+call   48 never executed
+    $$$$$:   30-block 18
+    $$$$$:   30-block 19
+call   49 never executed
+    $$$$$:   30-block 20
+    $$$$$:   30-block 21
+call   50 never executed
+    $$$$$:   30-block 22
+    $$$$$:   30-block 23
+call   51 never executed
+    $$$$$:   30-block 24
+    $$$$$:   30-block 25
+call   52 never executed
+    $$$$$:   30-block 26
+    $$$$$:   30-block 27
+call   53 never executed
+    $$$$$:   30-block 28
+    $$$$$:   30-block 29
+call   54 never executed
+    $$$$$:   30-block 30
+        2:   31:    return str;
+        2:   31-block  0
+    =====:   32:}
+    $$$$$:   32-block  0
+call    0 never executed
