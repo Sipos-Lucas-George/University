@@ -1,7 +1,0 @@
-# ninja log v5
-3	537	6756062134849434	CMakeFiles/A5.dir/ShortTest.cpp.obj	383f9dba6362ae7
-59	933	6756035293890915	CMakeFiles/A5.dir/SMMIterator.cpp.obj	6e55bac9489d9ac8
-3	392	6756060552837189	CMakeFiles/A5.dir/SortedMultiMap.cpp.obj	4b5e72637a482529
-537	724	6756062136673656	A5.exe	dec98a0d5c279122
-0	690	6753753356528019	CMakeFiles/A5.dir/App.cpp.obj	d88aef83c2a58518
-54	1148	6756035296051199	CMakeFiles/A5.dir/ExtendedTest.cpp.obj	c786d6907b0c60b3

@@ -1,3 +1,0 @@
-Politics,Marti,Sergiu
-Divertisment,Marti,Vlad,Sergiu
-Entertainment,Sergiu,Vlad,Marti

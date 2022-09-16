@@ -1,5 +1,0 @@
-D:/University/UNI/CLion/examPractice3/cmake-build-debug/CMakeFiles/examPractice3.dir
-D:/University/UNI/CLion/examPractice3/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/University/UNI/CLion/examPractice3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/University/UNI/CLion/examPractice3/cmake-build-debug/CMakeFiles/examPractice3_autogen_timestamp_deps.dir
-D:/University/UNI/CLion/examPractice3/cmake-build-debug/CMakeFiles/examPractice3_autogen.dir

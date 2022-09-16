@@ -1,5 +1,0 @@
-D:/CLion/practiceExam2/cmake-build-debug/CMakeFiles/practiceExam2.dir
-D:/CLion/practiceExam2/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/CLion/practiceExam2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/CLion/practiceExam2/cmake-build-debug/CMakeFiles/practiceExam2_autogen_timestamp_deps.dir
-D:/CLion/practiceExam2/cmake-build-debug/CMakeFiles/practiceExam2_autogen.dir

@@ -1,3 +1,0 @@
-D:/University/UNI/Semester 2/Data Structure and Algorithm/A5/cmake-build-debug/CMakeFiles/A5.dir
-D:/University/UNI/Semester 2/Data Structure and Algorithm/A5/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/University/UNI/Semester 2/Data Structure and Algorithm/A5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
