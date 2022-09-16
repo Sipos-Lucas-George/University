@@ -14,14 +14,14 @@
       <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%201/Algebra">Algebra</a></li>
     </ul>
   </li>
-  <li><a href="">:open_file_folder: Semester 2</a>
+  <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202">:open_file_folder: Semester 2</a>
     <ul>
-      <li><a href="">Data Structure and Algorithm</a></li>
-      <li><a href="">Object Oriented Programming</a></li>
-      <li><a href="">Graph Algorithms</a></li>
-      <li><a href="">Operating Systems</a></li>
-      <li><a href="">Dynamical Systems</a></li>
-      <li><a href="">Geometry</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Data%20Structure%20and%20Algorithm">Data Structure and Algorithm</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Object%20Oriented%20Programming">Object Oriented Programming</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Graph%20Algorithms/GA">Graph Algorithms</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Operating%20Systems">Operating Systems</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Dynamical%20Systems">Dynamical Systems</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%202/Geometry">Geometry</a></li>
     </ul>
   </li>
 </ul>
