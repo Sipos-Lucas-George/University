@@ -1,0 +1,901 @@
+Execution Stack:
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+;
+Print: VariableExpression{v}
+;
+NopStatement
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+;
+Print: VariableExpression{v}
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {a: int};
+Declaration {v: int}
+
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {v: int}
+Declaration {a: int}
+
+Symbol Table:
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {v: int}
+
+Symbol Table:
+a : 0
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+
+Symbol Table:
+a : 0
+v : 0
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+
+Symbol Table:
+a : 10
+v : 0
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+
+Symbol Table:
+a : 10
+v : 5
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+Assigment{v = ValueExpression{3}}
+
+Symbol Table:
+a : 10
+v : 5
+
+Out:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+
+Execution Stack:
+NopStatement
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+3
+
+Execution Stack:
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+3
+
+Execution Stack:
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+;
+Print: VariableExpression{v}
+;
+NopStatement
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+;
+Print: VariableExpression{v}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+;
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+;
+Assigment{v = ValueExpression{5}}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Declaration {a: int};
+Declaration {v: int}
+;
+Assigment{a = ValueExpression{10}}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {a: int};
+Declaration {v: int}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {v: int}
+Declaration {a: int}
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+Declaration {v: int}
+
+Symbol Table:
+a : 0
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+Assigment{a = ValueExpression{10}}
+
+Symbol Table:
+a : 0
+v : 0
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+Assigment{v = ValueExpression{5}}
+
+Symbol Table:
+a : 10
+v : 0
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+if(BinaryExpression{VariableExpression{a} LESS VariableExpression{v}}){
+	Assigment{v = ValueExpression{2}}
+}else{
+	Assigment{v = ValueExpression{3}}
+}
+
+Symbol Table:
+a : 10
+v : 5
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+Assigment{v = ValueExpression{3}}
+
+Symbol Table:
+a : 10
+v : 5
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Print: VariableExpression{v}
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+3
+
+File Table:
+
+Execution Stack:
+
+Symbol Table:
+a : 10
+v : 3
+
+Out:
+3
+
+File Table:
+
+Execution Stack:
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+Close(r) file {VariableExpression{varF}}
+;
+NopStatement
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+Close(r) file {VariableExpression{varF}}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+;
+ReadFile {VariableExpression{varF}: x}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+;
+Print: VariableExpression{x}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+;
+ReadFile {VariableExpression{varF}: x}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+;
+Declaration {x: int}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+;
+Open(r) file {VariableExpression{varF}}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+Open(r) file {VariableExpression{varF}}
+Declaration {varF: string};
+Assigment{varF = ValueExpression{test.in}}
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+Open(r) file {VariableExpression{varF}}
+Assigment{varF = ValueExpression{test.in}}
+Declaration {varF: string}
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+Open(r) file {VariableExpression{varF}}
+Assigment{varF = ValueExpression{test.in}}
+
+Symbol Table:
+varF : 
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+Open(r) file {VariableExpression{varF}}
+
+Symbol Table:
+varF : test.in
+
+Out:
+
+File Table:
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Declaration {x: int}
+
+Symbol Table:
+varF : test.in
+
+Out:
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+
+Symbol Table:
+varF : test.in
+x : 0
+
+Out:
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+Print: VariableExpression{x}
+
+Symbol Table:
+varF : test.in
+x : 15
+
+Out:
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+ReadFile {VariableExpression{varF}: x}
+
+Symbol Table:
+varF : test.in
+x : 15
+
+Out:
+15
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+Print: VariableExpression{x}
+
+Symbol Table:
+varF : test.in
+x : 50
+
+Out:
+15
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+Close(r) file {VariableExpression{varF}}
+
+Symbol Table:
+varF : test.in
+x : 50
+
+Out:
+15
+50
+
+File Table:
+java.io.BufferedReader@5ce65a89
+
+Execution Stack:
+NopStatement
+
+Symbol Table:
+varF : test.in
+x : 50
+
+Out:
+15
+50
+
+File Table:
+
+Execution Stack:
+
+Symbol Table:
+varF : test.in
+x : 50
+
+Out:
+15
+50
+
+File Table:
+

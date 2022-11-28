@@ -4,17 +4,21 @@ import Controller.Controller;
 import Exceptions.MyException;
 import Model.ADT.IList;
 import Model.ADT.MyList;
-import Model.Expressions.ArithExpression;
-import Model.Expressions.ValueExpression;
-import Model.Expressions.VariableExpression;
-import Model.Expressions.BinaryExpression;
+import Model.Expressions.*;
+import Model.FileManager.CloseFile;
+import Model.FileManager.OpenFile;
+import Model.FileManager.ReadFile;
 import Model.ProgramState;
 import Model.Statements.*;
 import Model.Types.BoolType;
 import Model.Types.IntType;
+import Model.Types.StringType;
 import Model.Values.BoolValue;
 import Model.Values.IntValue;
+import Model.Values.StringValue;
 import Repository.Repository;
+
+import java.io.IOException;
 
 public class ExampleView implements View{
     public static IStatement buildExample(IStatement... statements) {
@@ -31,7 +35,7 @@ public class ExampleView implements View{
         return finalStatement;
     }
 
-    protected IStatement example0() {
+    protected static IStatement example0() {
         return buildExample(
                 new DeclarationStatement("v", new IntType()),
                 new AssStatement("v", new ValueExpression(new IntValue(2))),
@@ -41,7 +45,7 @@ public class ExampleView implements View{
         );
     }
 
-    protected IStatement example1() {
+    protected static IStatement example1() {
         return buildExample(
                 new DeclarationStatement("a", new IntType()),
                 new DeclarationStatement("b", new IntType()),
@@ -64,13 +68,14 @@ public class ExampleView implements View{
         );
     }
 
-    protected IStatement example2(){
+    protected static IStatement example2(){
         return buildExample(
-                new DeclarationStatement("a", new BoolType()),
+                new DeclarationStatement("a", new IntType()),
                 new DeclarationStatement("v", new IntType()),
-                new AssStatement("a", new ValueExpression(new BoolValue(true))),
+                new AssStatement("a", new ValueExpression(new IntValue(10))),
+                new AssStatement("v", new ValueExpression(new IntValue(5))),
                 new IfStatement(
-                        new VariableExpression("a"),
+                        new RelationalExpression(BinaryExpression.OPERATOR.LESS, new VariableExpression("a"), new VariableExpression("v")),
                         new AssStatement("v", new ValueExpression(new IntValue(2))),
                         new AssStatement("v", new ValueExpression(new IntValue(3)))
                 ),
@@ -78,20 +83,42 @@ public class ExampleView implements View{
         );
     }
 
+    protected static IStatement example3(){
+        return buildExample(
+                new DeclarationStatement("varF", new StringType()),
+                new AssStatement("varF", new ValueExpression(new StringValue("test.in"))),
+                new OpenFile(new VariableExpression("varF")),
+                new DeclarationStatement("x", new IntType()),
+                new ReadFile(new VariableExpression("varF"), "x"),
+                new PrintStatement(new VariableExpression("x")),
+                new ReadFile(new VariableExpression("varF"), "x"),
+                new PrintStatement(new VariableExpression("x")),
+                new CloseFile(new VariableExpression("varF"))
+        );
+    }
+
+    public static IStatement[] exampleList(){
+        return new IStatement[]{example0(), example1(), example2(), example3()};
+    }
+
     @Override
     public void execute(){
         ProgramState programState = new ProgramState();
         IList<ProgramState> programStates = new MyList<>();
         programStates.add(programState);
-        Repository repository = new Repository(programStates);
-        Controller controller = new Controller(repository);
-        IStatement statement = example2();
         try {
-            statement.execute(programState);
-            controller.setDisplayFlagOn();
-            controller.allSteps();
+            Repository repository = new Repository(programStates, "D:\\University\\University\\Semester 3\\Advanced Programming Methods\\ToyLanguage\\src\\Repository\\logFile.txt");
+            Controller controller = new Controller(repository);
+            IStatement statement = example3();
+            try {
+                statement.execute(programState);
+                controller.setDisplayFlagOn();
+                controller.allSteps();
 //            System.out.print("Program output:\n" + programState.toString());
-        } catch (MyException e) {
+            } catch (MyException e) {
+                System.out.println(e.toString());
+            }
+        } catch (IOException e) {
             System.out.println(e.toString());
         }
     }

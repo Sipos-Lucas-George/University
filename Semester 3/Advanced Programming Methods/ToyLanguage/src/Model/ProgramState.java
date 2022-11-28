@@ -5,21 +5,34 @@ import Model.ADT.*;
 import Model.Statements.IStatement;
 import Model.Values.Value;
 
+import java.io.BufferedReader;
+
 public class ProgramState {
     private final IStack<IStatement> execStack;
     private final IDictionary<String, Value> symTable;
     private final IList<String> out;
+    private final IDictionary<String, BufferedReader> fileTable;
+
+    public ProgramState(IStatement originalProgram) {
+        execStack = new MyStack<>();
+        symTable = new MyDictionary<>();
+        out = new MyList<>();
+        fileTable = new MyDictionary<>();
+        execStack.push(originalProgram);
+    }
 
     public ProgramState(){
         execStack = new MyStack<>();
         symTable = new MyDictionary<>();
         out = new MyList<>();
+        fileTable = new MyDictionary<>();
     }
 
-    public ProgramState(IStack<IStatement> execStack, IDictionary<String, Value> symTable, IList<String> out) {
+    public ProgramState(IStack<IStatement> execStack, IDictionary<String, Value> symTable, IList<String> out, IDictionary<String, BufferedReader> fileTable) {
         this.execStack = execStack;
         this.symTable = symTable;
         this.out = out;
+        this.fileTable = fileTable;
     }
 
     public IStack<IStatement> getExecStack(){
@@ -32,6 +45,10 @@ public class ProgramState {
 
     public IList<String> getOut() {
         return out;
+    }
+
+    public IDictionary<String, BufferedReader> getFileTable() {
+        return fileTable;
     }
 
     public boolean isCompleted(){
@@ -69,12 +86,20 @@ public class ProgramState {
         }
         return builder.toString();
     }
+    public String fileToString(){
+        StringBuilder builder = new StringBuilder();
+        for(String o : fileTable.keys()){
+            builder.append(o).append("\n");
+        }
+        return builder.toString();
+    }
 
     @Override
     public String toString(){
-        return String.format("Execution Stack:\n%s\nSymbol Table:\n%s\nOut:\n%s",
+        return String.format("Execution Stack:\n%s\nSymbol Table:\n%s\nOut:\n%s\nFile Table:\n%s",
                 execToString(),
                 symToString(),
-                outToString());
+                outToString(),
+                fileToString());
     }
 }
