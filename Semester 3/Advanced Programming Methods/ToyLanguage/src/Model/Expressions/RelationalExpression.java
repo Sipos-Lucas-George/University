@@ -2,6 +2,7 @@ package Model.Expressions;
 
 import Exceptions.MyException;
 import Model.ADT.IDictionary;
+import Model.ADT.IHeap;
 import Model.Types.BoolType;
 import Model.Types.IntType;
 import Model.Types.Type;
@@ -15,8 +16,8 @@ public class RelationalExpression extends BinaryExpression {
     }
 
     @Override
-    public Value eval(IDictionary<String, Value> symTable) throws MyException {
-        IntValue left = getValue(this.left, symTable), right = getValue(this.right, symTable);
+    public Value eval(IDictionary<String, Value> symTable, IHeap heap) throws MyException {
+        IntValue left = getValue(this.left, symTable, heap), right = getValue(this.right, symTable, heap);
         return switch (this.operator) {
             case LESS -> new BoolValue(left.getValue() < right.getValue());
             case LESS_EQUAL -> new BoolValue(left.getValue() <= right.getValue());
@@ -44,8 +45,8 @@ public class RelationalExpression extends BinaryExpression {
         }
     }
 
-    private IntValue getValue(Expression expression, IDictionary<String, Value> symTable) throws MyException {
-        Value value = expression.eval(symTable);
+    private IntValue getValue(Expression expression, IDictionary<String, Value> symTable, IHeap heap) throws MyException {
+        Value value = expression.eval(symTable, heap);
         if (value instanceof IntValue) {
             return (IntValue) value;
         }

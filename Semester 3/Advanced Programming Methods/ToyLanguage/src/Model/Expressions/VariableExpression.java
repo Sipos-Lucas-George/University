@@ -2,6 +2,7 @@ package Model.Expressions;
 
 import Exceptions.MyException;
 import Model.ADT.IDictionary;
+import Model.ADT.IHeap;
 import Model.Types.Type;
 import Model.Values.Value;
 
@@ -13,7 +14,7 @@ public class VariableExpression implements Expression{
     }
 
     @Override
-    public Value eval(IDictionary<String, Value> symTable) throws MyException {
+    public Value eval(IDictionary<String, Value> symTable, IHeap heap) throws MyException {
         return symTable.get(key);
     }
 

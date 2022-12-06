@@ -6,7 +6,6 @@ import Model.Expressions.Expression;
 import Model.ProgramState;
 import Model.Types.Type;
 import Model.Values.Value;
-import View.View;
 
 public class AssStatement implements IStatement{
     private final String key;
@@ -21,7 +20,7 @@ public class AssStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws MyException {
         IDictionary<String, Value> symTable = state.getSymTable();
         Type type = symTable.get(key).getType();
-        Value value = expression.eval(symTable);
+        Value value = expression.eval(symTable, state.getHeap());
         if (!value.getType().equals(type))
             throw new MyException(String.format("ERROR: %s is not compatible with %s", value.toString(), type.toString()));
         if (!symTable.containsKey(key))
