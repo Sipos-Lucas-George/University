@@ -1,6 +1,7 @@
 package Model.ADT;
 
 import Exceptions.MyException;
+import Model.Values.Value;
 
 import java.util.Collection;
 import java.util.Map;
@@ -15,7 +16,10 @@ public interface IDictionary<K, V>{
     Collection<V> values();
     Set<K> keys();
     MyDictionary<K, V> cloneDict();
+    Map<K, V> getContent();
+
     int size();
     Iterable<Map.Entry<K, V>> getAll();
     String toString();
+
 }

@@ -7,6 +7,8 @@ import Model.Values.Value;
 
 import java.io.BufferedReader;
 import java.util.Map;
+import java.util.Random;
+import java.util.TreeSet;
 
 public class ProgramState {
     private final IStack<IStatement> execStack;
@@ -14,6 +16,8 @@ public class ProgramState {
     private final IList<String> out;
     private final IDictionary<String, BufferedReader> fileTable;
     private final IHeap heap;
+    private static final TreeSet<Integer> ids = new TreeSet<>();
+    private final Integer id;
 
     public ProgramState(IStatement originalProgram) {
         execStack = new MyStack<>();
@@ -22,6 +26,7 @@ public class ProgramState {
         fileTable = new MyDictionary<>();
         execStack.push(originalProgram);
         heap = new MyHeap();
+        id = newID();
     }
 
     public ProgramState(){
@@ -30,6 +35,7 @@ public class ProgramState {
         out = new MyList<>();
         fileTable = new MyDictionary<>();
         heap = new MyHeap();
+        id = newID();
     }
 
     public ProgramState(IStack<IStatement> execStack, IDictionary<String, Value> symTable, IList<String> out, IDictionary<String, BufferedReader> fileTable, IHeap heap) {
@@ -38,6 +44,7 @@ public class ProgramState {
         this.out = out;
         this.fileTable = fileTable;
         this.heap = heap;
+        id = newID();
     }
 
     public IStack<IStatement> getExecStack(){
@@ -64,11 +71,23 @@ public class ProgramState {
         return execStack.isEmpty();
     }
 
-    public ProgramState thisStep() throws MyException {
+    public ProgramState oneStep() throws MyException {
         if(execStack.isEmpty())
             throw new MyException("ERROR: Execution stack is empty!");
         IStatement statement = execStack.pop();
         return statement.execute(this);
+    }
+
+    private static Integer newID() {
+        Random random = new Random();
+        Integer _id;
+        synchronized (ids){
+            do {
+                _id = 1000 + (random.nextInt() % 9000);
+            } while (ids.contains(_id));
+            ids.add(_id);
+        }
+        return _id;
     }
 
     public String execToString(){
@@ -114,7 +133,8 @@ public class ProgramState {
 
     @Override
     public String toString(){
-        return String.format("Execution Stack:\n%s\nSymbol Table:\n%s\nOut:\n%s\nFile Table:\n%s\nHeap:\n%s",
+        return String.format("ID: %d\nExecution Stack:\n%s\nSymbol Table:\n%s\nOut:\n%s\nFile Table:\n%s\nHeap:\n%s",
+                id,
                 execToString(),
                 symToString(),
                 outToString(),

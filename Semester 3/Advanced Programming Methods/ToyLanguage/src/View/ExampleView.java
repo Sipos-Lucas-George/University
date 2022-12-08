@@ -18,6 +18,8 @@ import Model.Values.StringValue;
 import Repository.Repository;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExampleView implements View{
     public static IStatement buildExample(IStatement... statements) {
@@ -155,7 +157,7 @@ public class ExampleView implements View{
     @Override
     public void execute(){
         ProgramState programState = new ProgramState();
-        IList<ProgramState> programStates = new MyList<>();
+        List<ProgramState> programStates = new ArrayList<>();
         programStates.add(programState);
         try {
             Repository repository = new Repository(programStates, "D:\\University\\University\\Semester 3\\Advanced Programming Methods\\ToyLanguage\\src\\Repository\\logFile.txt");
