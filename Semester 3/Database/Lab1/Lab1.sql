@@ -12,25 +12,25 @@ use [Database];
 
 CREATE TABLE TransportBusiness
 (
-    nameOfBusiness      varchar(30) NOT NULL UNIQUE,
-    annualIncome        float       NOT NULL,
-    profitPercentage    float       NOT NULL,
-    establishedCompany datetime,
+    nameOfBusiness     varchar(50) NOT NULL UNIQUE,
+    annualIncome       float       NOT NULL,
+    profitPercentage   float       NOT NULL,
+    establishedCompany date,
     PRIMARY KEY (nameOfBusiness)
 );
 
 CREATE TABLE Administrator
 (
-    nameOfBusiness  varchar(30) UNIQUE FOREIGN Key REFERENCES TransportBusiness (nameOfBusiness) ON DELETE CASCADE,
-    fullName        varchar(60) NOT NULL,
-    telephoneNumber varchar(15) NOT NULL,
-    officeAddress   varchar(50) NOT NULL,
+    nameOfBusiness  varchar(50) FOREIGN Key REFERENCES TransportBusiness (nameOfBusiness) ON DELETE CASCADE,
+    fullName        varchar(60)  NOT NULL,
+    telephoneNumber varchar(15)  NOT NULL,
+    officeAddress   varchar(100) NOT NULL,
     PRIMARY KEY (nameOfBusiness)
 );
 
 CREATE TABLE Employee
 (
-    nameOfBusiness  varchar(30) UNIQUE FOREIGN Key REFERENCES Administrator (nameOfBusiness) ON DELETE CASCADE,
+    nameOfBusiness  varchar(50) FOREIGN Key REFERENCES Administrator (nameOfBusiness) ON DELETE CASCADE,
     fullName        varchar(60) NOT NULL,
     telephoneNumber varchar(15) NOT NULL,
     wage            int         NOT NULL,
@@ -49,36 +49,37 @@ CREATE TABLE Trip
 
 CREATE TABLE Load
 (
-    loadID       int NOT NULL,
-    employeeName varchar(60),
-    tripID       int NOT NULL,
+    loadID         int NOT NULL,
+    loadSupplierID int,
+    employeeName   varchar(60),
+    tripID         int,
     PRIMARY KEY (loadID),
+    FOREIGN KEY (loadSupplierID)
+        REFERENCES Load (loadID)
+        ON DELETE NO ACTION,
     FOREIGN KEY (employeeName)
         REFERENCES Employee (fullName)
-        ON DELETE CASCADE,
+        ON DELETE NO ACTION,
     FOREIGN KEY (tripID)
         REFERENCES Trip (tripID)
-        ON DELETE CASCADE
+        ON DELETE NO ACTION
 );
 
 CREATE TABLE LoadSupplier
 (
+    loadID          int          NOT NULL,
     nameOfCompany   varchar(60)  NOT NULL,
     telephoneNumber varchar(15)  NOT NULL,
     spokenLanguages varchar(256) NOT NULL,
-    loadID          int          NOT NULL,
-    primary key (nameOfCompany),
-    FOREIGN KEY (loadID)
-        REFERENCES Load (loadID)
-        ON DELETE CASCADE
+    primary key (loadID)
 );
 
 CREATE TABLE TransportExchange
 (
-    siteLink      varchar(256) NOT NULL,
-    nameOfCompany varchar(60)  NOT NULL,
-    FOREIGN KEY (nameOfCompany)
-        REFERENCES LoadSupplier (nameOfCompany)
+    siteLink  varchar(256) NOT NULL,
+    companyID INT          NOT NULL,
+    FOREIGN KEY (companyID)
+        REFERENCES LoadSupplier (loadID)
         ON DELETE CASCADE
 );
 
@@ -105,12 +106,12 @@ CREATE TABLE Expenses
 
 CREATE TABLE CMR
 (
-    consignor    varchar(30) NOT NULL,
-    loadSupplier varchar(60) NOT NULL,
+    consignor    varchar(50) NOT NULL,
+    loadSupplier INT NOT NULL,
     details      varchar(1024),
     FOREIGN KEY (consignor)
         REFERENCES Administrator (nameOfBusiness)
         ON DELETE CASCADE,
     FOREIGN KEY (loadSupplier)
-        REFERENCES LoadSupplier (nameOfCompany)
+        REFERENCES LoadSupplier (loadID)
 );
