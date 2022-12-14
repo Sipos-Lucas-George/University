@@ -47,8 +47,7 @@ public class Controller {
     }
 
     List<ProgramState> removeCompletedPrograms(List<ProgramState> programStateList) {
-        List<ProgramState> toReturn = programStateList.stream().filter(p -> !p.isCompleted()).collect(Collectors.toList());
-        return toReturn;
+        return programStateList.stream().filter(p -> !p.isCompleted()).collect(Collectors.toList());
     }
 
     Map<String, Value> safeGarbageCollector(Set<String> symTableAddr, Map<String, Value> heap){
