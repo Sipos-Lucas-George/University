@@ -5,6 +5,7 @@ import Model.ADT.IList;
 import Model.ADT.IStack;
 import Model.ADT.Pair;
 import Model.ProgramState;
+import Model.Statements.CompStatement;
 import Model.Statements.IStatement;
 import Model.Values.RefValue;
 import Model.Values.Value;
@@ -47,9 +48,6 @@ public class Controller {
 
     List<ProgramState> removeCompletedPrograms(List<ProgramState> programStateList) {
         List<ProgramState> toReturn = programStateList.stream().filter(p -> !p.isCompleted()).collect(Collectors.toList());
-        if(toReturn.isEmpty() && !programStateList.isEmpty()){
-            toReturn.add(programStateList.get(0));
-        }
         return toReturn;
     }
 
@@ -60,13 +58,6 @@ public class Controller {
     }
 
     Set<String> getAddrFromSymTable(List<Collection<Value>> symTableValues, Map<String, Value> heap) {
-//        return symTableValues.stream()
-//                .filter(v -> v instanceof RefValue)
-//                .map(v -> {
-//                    RefValue v1= (RefValue) v;
-//                    return v1.getAddress();
-//                })
-//                .collect(Collectors.toSet());
         Set<String> set = new TreeSet<>();
         symTableValues.forEach(sym -> sym.stream()
                 .filter(v -> v instanceof RefValue)
@@ -100,8 +91,7 @@ public class Controller {
             }
         });
         List<Callable<ProgramState>> callableList = programStateList.stream()
-                .map((ProgramState p) -> (Callable<ProgramState>) (p::oneStep))
-                .collect(Collectors.toList());
+                .map((ProgramState p) -> (Callable<ProgramState>) (p::oneStep)).collect(Collectors.toList());
         List<Pair<ProgramState, MyException>> newProgramState = null;
         try {
             newProgramState = executor.invokeAll(callableList).stream()
@@ -128,13 +118,15 @@ public class Controller {
                 throw error.second;
         }
 
-        programStateList.addAll(newProgramState.stream().map(pair -> pair.first).toList());
+        programStateList.addAll(newProgramState.stream().map(pair -> pair.first).collect(Collectors.toList()));
         repository.setProgramStates(programStateList);
     }
 
     public IList<String> allSteps() throws MyException{
         this.executor = Executors.newFixedThreadPool(2);
         List<ProgramState> programStateList = removeCompletedPrograms(repository.getProgramStates());
+        if(!repository.getCurrentPrg().getOut().isEmpty())
+            return repository.getCurrentPrg().getOut();
         IList<String> out = programStateList.get(0).getOut();
         while(!programStateList.isEmpty()){
             ProgramState state = programStateList.get(0);
@@ -151,7 +143,6 @@ public class Controller {
             programStateList = removeCompletedPrograms(repository.getProgramStates());
         }
         executor.shutdownNow();
-        repository.setProgramStates(programStateList);
         return out;
     }
 }

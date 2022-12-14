@@ -31,40 +31,52 @@ public class MyHeap implements IHeap{
 
     @Override
     public String getFreeValue() {
-        return freeValue;
+        synchronized (this){
+            return freeValue;
+        }
     }
 
     @Override
     public Map<String, Value> getContent() {
-        return map;
+        synchronized (this){
+            return map;
+        }
     }
 
     @Override
     public void setContent(Map<String, Value> newMap) {
-        map.clear();
-        for(String i : newMap.keySet())
-            map.put(i, newMap.get(i));
+        synchronized (this){
+            map.clear();
+            for(String i : newMap.keySet())
+                map.put(i, newMap.get(i));
+        }
     }
 
     @Override
     public String add(Value value) {
-        map.put(this.freeValue, value);
-        String res = this.freeValue;
-        this.freeValue = this.newValue();
-        return res;
+        synchronized (this){
+            map.put(this.freeValue, value);
+            String res = this.freeValue;
+            this.freeValue = this.newValue();
+            return res;
+        }
     }
 
     @Override
     public void update(String position, Value value) throws MyException {
-        if(!map.containsKey(position))
-            throw new MyException(String.format("ERROR: %s is not present in heap", position));
-        map.put(position, value);
+        synchronized (this){
+            if(!map.containsKey(position))
+                throw new MyException(String.format("ERROR: %s is not present in heap", position));
+            map.put(position, value);
+        }
     }
 
     @Override
     public Value get(String position) throws MyException {
-        if(!map.containsKey(position))
-            throw new MyException(String.format("ERROR: %s is not present in heap", position));
-        return map.get(position);
+        synchronized (this){
+            if(!map.containsKey(position))
+                throw new MyException(String.format("ERROR: %s is not present in heap", position));
+            return map.get(position);
+        }
     }
 }

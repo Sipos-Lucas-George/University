@@ -5,6 +5,10 @@ import Model.ADT.IStack;
 import Model.ADT.MyStack;
 import Model.ProgramState;
 
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.stream.Collectors;
+
 public class Fork implements IStatement{
     private final IStatement statement;
 
@@ -16,7 +20,7 @@ public class Fork implements IStatement{
     public ProgramState execute(ProgramState state) throws MyException {
         IStack<IStatement> newExecStack = new MyStack<>();
         newExecStack.push(statement);
-        return new ProgramState(newExecStack, state.getSymTable().cloneDict(), state.getOut(), state.getFileTable(), state.getHeap());
+        return new ProgramState(newExecStack, state.getSymTable().copy(), state.getOut(), state.getFileTable(), state.getHeap());
     }
 
     public String toString(){

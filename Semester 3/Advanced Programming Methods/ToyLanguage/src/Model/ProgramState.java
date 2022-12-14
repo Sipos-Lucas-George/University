@@ -2,6 +2,8 @@ package Model;
 
 import Exceptions.MyException;
 import Model.ADT.*;
+import Model.Statements.CompStatement;
+import Model.Statements.Fork;
 import Model.Statements.IStatement;
 import Model.Values.Value;
 
@@ -9,6 +11,8 @@ import java.io.BufferedReader;
 import java.util.Map;
 import java.util.Random;
 import java.util.TreeSet;
+
+import static java.lang.Math.abs;
 
 public class ProgramState {
     private final IStack<IStatement> execStack;
@@ -71,19 +75,30 @@ public class ProgramState {
         return execStack.isEmpty();
     }
 
+    protected IStatement loadFork(IStatement statement){
+        while (statement instanceof CompStatement){
+            statement.execute(this);
+            statement = this.execStack.pop();
+        }
+        return statement;
+    }
+
     public ProgramState oneStep() throws MyException {
         if(execStack.isEmpty())
             throw new MyException("ERROR: Execution stack is empty!");
         IStatement statement = execStack.pop();
+        if(statement instanceof CompStatement){
+            statement = loadFork(statement);
+        }
         return statement.execute(this);
     }
 
-    private static Integer newID() {
+    private static int newID() {
         Random random = new Random();
-        Integer _id;
+        int _id;
         synchronized (ids){
             do {
-                _id = 1000 + (random.nextInt() % 9000);
+                _id = 1000 + abs((random.nextInt() % 9000));
             } while (ids.contains(_id));
             ids.add(_id);
         }

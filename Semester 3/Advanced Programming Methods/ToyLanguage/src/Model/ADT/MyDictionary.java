@@ -20,61 +20,81 @@ public class MyDictionary<K, V> implements IDictionary<K, V>{
 
     @Override
     public V get(K key) {
-        return this.dictionary.get(key);
+        synchronized (dictionary){
+            return this.dictionary.get(key);
+        }
     }
 
     @Override
     public V put(K key, V value) {
-        return this.dictionary.put(key, value);
+        synchronized (dictionary){
+            return this.dictionary.put(key, value);
+        }
     }
 
     @Override
     public boolean containsKey(K key) {
-        return this.dictionary.containsKey(key);
+        synchronized (dictionary){
+            return this.dictionary.containsKey(key);
+        }
     }
 
     @Override
     public boolean containsValue(V value) {
-        return this.dictionary.containsValue(value);
+        synchronized (dictionary){
+            return this.dictionary.containsValue(value);
+        }
     }
 
     @Override
     public void remove(K key) throws MyException {
-        if(!this.dictionary.containsKey(key))
-            throw new MyException("ERROR: Cannot remove non-existing key!");
-        this.dictionary.remove(key);
+        synchronized (dictionary){
+            if(!this.dictionary.containsKey(key))
+                throw new MyException("ERROR: Cannot remove non-existing key!");
+            this.dictionary.remove(key);
+        }
     }
 
     @Override
     public Collection<V> values() {
-        return this.dictionary.values();
+        synchronized (dictionary){
+            return this.dictionary.values();
+        }
     }
 
     @Override
     public Set<K> keys() {
-        return this.dictionary.keySet();
+        synchronized (dictionary){
+            return this.dictionary.keySet();
+        }
     }
 
     @Override
-    public MyDictionary<K, V> cloneDict() {
+    public MyDictionary<K, V> copy() {
         MyDictionary<K, V> dict = new MyDictionary<>();
         for(K key : this.keys())
-            dict.put(key, dict.get(key));
+            dict.put(key, this.dictionary.get(key));
         return dict;
     }
 
     @Override
     public Map<K, V> getContent() {
-        return dictionary;
+        synchronized (dictionary){
+            return dictionary;
+        }
     }
 
     @Override
     public int size() {
-        return this.dictionary.size();
+        synchronized (dictionary){
+            return this.dictionary.size();
+        }
     }
 
     @Override
     public Iterable<Map.Entry<K, V>> getAll() {
-        return this.dictionary.entrySet();
+        synchronized (dictionary){
+            return this.dictionary.entrySet();
+        }
     }
 }
