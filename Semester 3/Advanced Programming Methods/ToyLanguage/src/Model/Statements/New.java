@@ -39,6 +39,13 @@ public class New implements IStatement{
         return null;
     }
 
+    @Override
+    public IDictionary<String, Type> typeCheck(IDictionary<String, Type> typeTable) throws MyException {
+        if(!typeTable.get(varName).equals(new RefType(expression.typeCheck(typeTable))))
+            throw new MyException("New: right side and left side have different types");
+        return typeTable;
+    }
+
     public String toString(){
         return String.format("New{%s : %s}", varName, expression);
     }

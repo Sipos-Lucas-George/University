@@ -24,6 +24,11 @@ public class CompStatement implements IStatement{
     }
 
     @Override
+    public IDictionary<String, Type> typeCheck(IDictionary<String, Type> typeTable) throws MyException {
+        return second.typeCheck(first.typeCheck(typeTable));
+    }
+
+    @Override
     public String toString(){
         return String.format("%s -> %s\n", first.toString(), second.toString());
     }

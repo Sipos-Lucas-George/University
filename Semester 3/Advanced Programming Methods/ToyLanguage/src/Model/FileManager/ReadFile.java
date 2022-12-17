@@ -7,6 +7,7 @@ import Model.ProgramState;
 import Model.Statements.IStatement;
 import Model.Types.IntType;
 import Model.Types.StringType;
+import Model.Types.Type;
 import Model.Values.IntValue;
 import Model.Values.StringValue;
 import Model.Values.Value;
@@ -52,6 +53,15 @@ public class ReadFile implements IStatement {
             throw new MyException(String.format("ERROR: could not read from file %s", castValue));
         }
         return null;
+    }
+
+    @Override
+    public IDictionary<String, Type> typeCheck(IDictionary<String, Type> typeTable) throws MyException {
+        if(!expression.typeCheck(typeTable).equals(new StringType()))
+            throw new MyException("ERROR: ReadFile requires a string as expression parameter");
+        if(!typeTable.get(varName).equals(new IntType()))
+            throw new MyException("ERROR: ReadFile requires an int as variable parameter");
+        return typeTable;
     }
 
     public String toString() {

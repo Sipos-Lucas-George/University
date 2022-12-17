@@ -5,6 +5,8 @@ import Model.ADT.IDictionary;
 import Model.ADT.IHeap;
 import Model.Expressions.Expression;
 import Model.ProgramState;
+import Model.Types.RefType;
+import Model.Types.Type;
 import Model.Values.RefValue;
 import Model.Values.Value;
 
@@ -34,6 +36,13 @@ public class WriteHeap implements IStatement{
 
         heap.update(refValue.getAddress(), evaluated);
         return null;
+    }
+
+    @Override
+    public IDictionary<String, Type> typeCheck(IDictionary<String, Type> typeTable) throws MyException {
+        if(!typeTable.get(varName).equals(new RefType(expression.typeCheck(typeTable))))
+            throw new MyException("WriteHeap: right side and left side have different types");
+        return typeTable;
     }
 
     public String toString() {

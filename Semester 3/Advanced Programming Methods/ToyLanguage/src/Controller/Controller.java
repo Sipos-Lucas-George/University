@@ -1,12 +1,11 @@
 package Controller;
 
 import Exceptions.MyException;
-import Model.ADT.IList;
-import Model.ADT.IStack;
-import Model.ADT.Pair;
+import Model.ADT.*;
 import Model.ProgramState;
 import Model.Statements.CompStatement;
 import Model.Statements.IStatement;
+import Model.Types.Type;
 import Model.Values.RefValue;
 import Model.Values.Value;
 import Repository.IRepository;
@@ -121,11 +120,19 @@ public class Controller {
         repository.setProgramStates(programStateList);
     }
 
+    public void typeChecker() throws MyException {
+        for (ProgramState state : repository.getProgramStates()){
+            IDictionary<String, Type> typeTable = new MyDictionary<>();
+            state.getExecStack().top().typeCheck(typeTable);
+        }
+    }
+
     public IList<String> allSteps() throws MyException{
-        this.executor = Executors.newFixedThreadPool(2);
-        List<ProgramState> programStateList = removeCompletedPrograms(repository.getProgramStates());
         if(!repository.getCurrentPrg().getOut().isEmpty())
             return repository.getCurrentPrg().getOut();
+        typeChecker();
+        this.executor = Executors.newFixedThreadPool(2);
+        List<ProgramState> programStateList = removeCompletedPrograms(repository.getProgramStates());
         IList<String> out = programStateList.get(0).getOut();
         while(!programStateList.isEmpty()){
             ProgramState state = programStateList.get(0);

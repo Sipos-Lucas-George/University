@@ -1,9 +1,11 @@
 package Model.Statements;
 
 import Exceptions.MyException;
+import Model.ADT.IDictionary;
 import Model.ADT.IStack;
 import Model.ADT.MyStack;
 import Model.ProgramState;
+import Model.Types.Type;
 
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -21,6 +23,12 @@ public class Fork implements IStatement{
         IStack<IStatement> newExecStack = new MyStack<>();
         newExecStack.push(statement);
         return new ProgramState(newExecStack, state.getSymTable().copy(), state.getOut(), state.getFileTable(), state.getHeap());
+    }
+
+    @Override
+    public IDictionary<String, Type> typeCheck(IDictionary<String, Type> typeTable) throws MyException {
+        statement.typeCheck(typeTable.copy());
+        return typeTable;
     }
 
     public String toString(){
