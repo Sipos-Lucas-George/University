@@ -1,0 +1,26 @@
+p = probability of success
+n = sample size
+N =  number of simulations
+mu = population mean
+sigma = population standard deviation
+q = probability of failure
+theta = population parameters for normal distribution
+alpha = significance level (0,1), but in application it will belong in {0.05, 0.01, 0.001}
+(1 - alpha) = confidence level
+TS = test statistic 
+TS0 = TS with theta = theta0, observerd value of TS
+RR = rejection region
+P-value = minimum threshold of rejection (smallest alpha for which we still reject H0)
+ztest = known variance (known sigma)
+ttest = unknown variance (unknown sigma)
+H0 = the null hypotesis
+H1 = the alternative hypotesis
+	theta < theta0 => left-tailed test
+	theta > theta0 => right-tailed test
+	theta != theta0 => two-tailed test
+vartest2 = used with two-tailed test
+H = 0 (not rejected) or 1 (rejected)
+sample variance = var(x)
+sample standard deviation = std(x)
+sample mean = mean(x)
+norminv -> used for theoretical quantile
