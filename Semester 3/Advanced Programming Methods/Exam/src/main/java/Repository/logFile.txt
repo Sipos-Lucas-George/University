@@ -1,0 +1,714 @@
+ID: 2622
+Execution Stack:
+Declaration {v1: Reference(int)} -> Declaration {cnt: int}
+ -> New{v1 : ValueExpression{1}}
+ -> Create Semaphore(cnt: ReadHeap{VariableExpression{v1}})
+ -> Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+ -> Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+ -> Acquire(cnt)
+ -> Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+ -> Release(cnt)
+ -> NopStatement
+
+
+Symbol Table:
+
+Out:
+
+File Table:
+
+Heap:
+
+Semaphore Table:
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Create Semaphore(cnt: ReadHeap{VariableExpression{v1}})
+New{v1 : ValueExpression{1}}
+Declaration {cnt: int}
+
+Symbol Table:
+v1 : ReferenceValue{0 in int}
+
+Out:
+
+File Table:
+
+Heap:
+
+Semaphore Table:
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Create Semaphore(cnt: ReadHeap{VariableExpression{v1}})
+New{v1 : ValueExpression{1}}
+
+Symbol Table:
+cnt : 0
+v1 : ReferenceValue{0 in int}
+
+Out:
+
+File Table:
+
+Heap:
+
+Semaphore Table:
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Create Semaphore(cnt: ReadHeap{VariableExpression{v1}})
+
+Symbol Table:
+cnt : 0
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+Fork{
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 2234
+Execution Stack:
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2234
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 5321
+Execution Stack:
+Acquire(cnt) -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+ -> WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+ -> Print: ReadHeap{VariableExpression{v1}}
+ -> Release(cnt)
+ -> NopStatement
+
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 1
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2234
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2234
+Execution Stack:
+NopStatement
+Release(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2234]
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 2234
+Execution Stack:
+NopStatement
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: []
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: BinaryExpression{ReadHeap{VariableExpression{v1}} SUBSTR ValueExpression{1}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2622]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2622]
+
+ID: 2622
+Execution Stack:
+NopStatement
+Release(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2622]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+Acquire(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [2622]
+
+ID: 2622
+Execution Stack:
+NopStatement
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [5321]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{10}}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 10
+
+Semaphore Table:
+6417 -> 1: [5321]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+WriteHeap{v1 : BinaryExpression{ReadHeap{VariableExpression{v1}} MULT ValueExpression{2}}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 100
+
+Semaphore Table:
+6417 -> 1: [5321]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+Print: ReadHeap{VariableExpression{v1}}
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+
+File Table:
+
+Heap:
+d54c7e65 in 200
+
+Semaphore Table:
+6417 -> 1: [5321]
+
+ID: 5321
+Execution Stack:
+NopStatement
+Release(cnt)
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+200
+
+File Table:
+
+Heap:
+d54c7e65 in 200
+
+Semaphore Table:
+6417 -> 1: [5321]
+
+ID: 5321
+Execution Stack:
+NopStatement
+
+Symbol Table:
+cnt : 6417
+v1 : ReferenceValue{d54c7e65 in int}
+
+Out:
+10
+9
+200
+
+File Table:
+
+Heap:
+d54c7e65 in 200
+
+Semaphore Table:
+6417 -> 1: []
+
