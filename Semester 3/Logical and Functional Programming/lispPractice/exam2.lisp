@@ -1,0 +1,16 @@
+(defun lin(l)
+	(cond 
+		((null l) nil)
+		((atom l) l)
+		(T (mapcan #' lin l))
+	)
+)
+(defun main(l e col)
+	(cond
+		((and (atom l) (eq l e)) col)
+		((atom l) nil)
+		(T (apply #' lin (list (mapcar #' (lambda (a) (main a e (cons (car l) col))) l))))
+	)
+)
+(trace main)
+(print (main '(a (b (g)) (c (d (e)) (f))) 'e nil))

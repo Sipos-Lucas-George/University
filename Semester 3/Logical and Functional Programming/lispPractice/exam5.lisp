@@ -1,0 +1,15 @@
+(defun lin(l)
+	(cond
+		((null l) nil)
+		((atom l) (list l))
+		(T (mapcan #'(lambda (a) (lin a)) l))
+	)
+)
+(defun main(l lvl)
+	(cond
+		((and (atom l) (= (mod lvl 2) 0)) (list l))
+		((atom l) nil)
+		(T (list (mapcan #'(lambda (a) (main a (+ lvl 1))) l)))
+	)
+)
+(print (lin (main '(a (b (g)) (c (d (e (h))) (f))) -1)))
