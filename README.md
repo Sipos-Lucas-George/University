@@ -33,4 +33,13 @@
       <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%203/Probabilities%20and%20Statistics">Probabilities and Statistics</a></li>
     </ul>
   </li>
+  <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204">:open_file_folder: Semester 4</a>
+    <ul>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204/Artificial%20Intelligence">Artificial Intelligence</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204/Databse%20Management%20Systems">Database Management Systems</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204/Software%20Engineering"></a>Software Engineering</li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204/System%20Design%20%26%20Implementation">System Design & Implementation</a></li>
+      <li><a href="https://github.com/Sipos-Lucas-George/University/tree/main/Semester%204/Web%20Programming">Web Programming</a></li>
+    </ul>
+  </li>
 </ul>
