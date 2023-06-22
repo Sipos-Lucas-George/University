@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Dialog Example</title>
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    </head>
+    <body>
+        <button id="open-dialog-btn">Open Dialog</button>
+        <div id="dialog-box" title="Dialog Box">
+            <p>This is the content of the dialog window.</p>
+            <p>
+                You can move this dialog window around by dragging the title
+                bar.
+            </p>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#dialog-box").dialog({
+                    autoOpen: false,
+                    closeOnEscape: true,
+                    draggable: true,
+                    resizable: false,
+                    show: {
+                        effect: "fade",
+                        duration: 400,
+                    },
+                    hide: {
+                        effect: "fade",
+                        duration: 400,
+                    },
+                });
+                $("#open-dialog-btn").click(function () {
+                    $("#dialog-box").dialog("open");
+                });
+            });
+        </script>
+    </body>
+</html>

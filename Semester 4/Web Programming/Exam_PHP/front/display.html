@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+<form>
+    <label>
+        <input id="id" name="id" type="text" placeholder="id" required>
+    </label>
+    <label>
+        <input id="mother" name="mother" type="text" placeholder="mother" required>
+    </label>
+    <label>
+        <input id="father" name="father" type="text" placeholder="father" required>
+    </label>
+    <button onclick="addFun()" type="submit">ADD</button>
+</form>
+<button onclick="display()">Display siblings</button>
+<p id="values"></p>
+</body>
+<script src="script.js"></script>
+</html>

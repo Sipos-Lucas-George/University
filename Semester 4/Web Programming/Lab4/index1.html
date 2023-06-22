@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vertical Menu with Submenus</title>
+        <style>
+            /* Styles for the menu */
+            #menu {
+                width: 200px;
+                background-color: #eee;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            #menu a {
+                display: block;
+                text-decoration: none;
+                color: #333;
+                padding: 5px;
+                margin: 5px 0;
+                border-radius: 5px;
+            }
+
+            #menu a:hover {
+                background-color: #ddd;
+            }
+
+            /* Styles for the submenu */
+            .submenu {
+                display: none;
+            }
+
+            .submenu a {
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <a href="#">Menu 1</a>
+            <div class="submenu">
+                <a href="#">Submenu 1-1</a>
+                <a href="#">Submenu 1-2</a>
+                <a href="#">Submenu 1-3</a>
+            </div>
+            <a href="#">Menu 2</a>
+            <div class="submenu">
+                <a href="#">Submenu 2-1</a>
+                <a href="#">Submenu 2-2</a>
+            </div>
+            <a href="#">Menu 3</a>
+            <div class="submenu">
+                <a href="#">Submenu 3-1</a>
+                <a href="#">Submenu 3-2</a>
+                <a href="#">Submenu 3-3</a>
+                <a href="#">Submenu 3-4</a>
+            </div>
+            <a href="#">Menu 4</a>
+            <div class="submenu">
+                <a href="#">Submenu 4-1</a>
+                <a href="#">Submenu 4-2</a>
+                <a href="#">Submenu 4-3</a>
+            </div>
+            <a href="#">Menu 5</a>
+            <div class="submenu">
+                <a href="#">Submenu 5-1</a>
+                <a href="#">Submenu 5-2</a>
+                <a href="#">Submenu 5-3</a>
+                <a href="#">Submenu 5-4</a>
+                <a href="#">Submenu 5-5</a>
+            </div>
+        </div>
+
+        <script>
+            // Get all the menu items and submenus
+            const menuItems = document.querySelectorAll("#menu > a");
+            const submenus = document.querySelectorAll(".submenu");
+
+            // Add a click event listener to each menu item
+            menuItems.forEach((menuItem, index) => {
+                menuItem.addEventListener("click", () => {
+                    // Hide all the submenus
+                    submenus.forEach((submenu) => {
+                        submenu.style.display = "none";
+                    });
+
+                    // Show the submenu for the clicked menu item
+                    submenus[index].style.display = "block";
+                });
+            });
+        </script>
+    </body>
+</html>
