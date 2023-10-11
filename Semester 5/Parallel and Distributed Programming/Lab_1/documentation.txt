@@ -1,0 +1,29 @@
+The project is designed to take information from "stock_prices.txt" file that represent the items on stock on a store, formatted like this:
+"
+'number of items' - first line
+'name of item1' 'number of item1 on stock' 'price of item1' - second line
+'name of item2' 'number of item2 on stock' 'price of item2' - third line
+...
+'name of itemN' 'number of itemN on stock' 'price of itemN' - N+1 line
+"
+
+After that to generate some bills which are stored in the 'struct bill' and every thread is assigned a number of bills stored in the global variable THREAD, except every 3rd thread that is created because those are used for stock check.
+Check Stocks is a function that loops through all the items and checks if there are items that are out of stock.
+Process Bill is a function that allows every thread to modify the stocks of every item and uses mutex when a thread updates the data which is a shared memory structure. Also, every thread modifies the bill if the items are out of stock. In the end, the function adds everything that could be bought in store to the variable total in data struct and prints the thread id with the prices of all the bills assigned to that thread.
+
+Execution time of the program for 2 threads (processing bills), 1000 bills and 3 products:
+real    0m0.332s
+user    0m0.012s
+sys     0m0.012s
+
+Execution time of the program for 4 threads (processing bills) and 1 thread (stock check), 1000 bills and 3 products:
+real    0m0.386s
+user    0m0.009s
+sys     0m0.017s
+
+
+Execution time of the program for 8 threads (processing bills) and 3 threads (stock check), 1000 bills and 3 products:
+real    0m0.385s
+user    0m0.004s
+sys     0m0.021s
+
