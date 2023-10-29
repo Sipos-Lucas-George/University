@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dream Car</string>
+    <string name="edit_car">Edit Car</string>
+    <string name="delete_car">Delete Car</string>
+    <string name="save_car">Save Car</string>
+    <string name="create_car">Create Car</string>
+    <string name="back">Back</string>
+</resources>

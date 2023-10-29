@@ -1,0 +1,27 @@
+-1- A short description,. Note that the client is not having a technical background.
+The project is called "Dream Cars" and it is a mobile app that will allow the user to see the list of all the cars he wants to buy. At first sight, the app will show every car that the user already saved, as an expandable field with an image of that car and the model of it. When clicking on a car the user will see all the details saved about it, such as photo of the car, model, year, fuel type, cylinder capacity, horse power and transmission type. Also, the user will have 2 buttons for updating or deleting the car. At the top of the screen, the user will be presented with a button, to add cars to his list.
+
+-2- Domain details. Present the details of the entities that will be persisted. Each field should have a description.
+Car {
+	image car_image; - upload an image of desired car
+	string model; - model of the car
+	int year; - the year of the car
+	string fuel_type; - choose between gasoline, diesel, bio diesel and electric
+	float cc; - cylinder capacity of the car
+	int hp; - horse power of the car
+	string transmission_type; - choose between manual, automatic and cvt
+}
+
+-3- CRUD. Present the details of each crud operation. - create. - read. - update. - delete.
+CREATE - The user can create a car with the specific details photo of the car, model, year, fuel type, cylinder capacity, horse power and transmission type, the only required fields is the model, the rest of them, if not specified, will be marked as unknown. The photo of the car will be a field that the user will upload the photo and the fuel type and transmission type will be choice fields that the user will need to choose from multiple suggestions.
+READ - The user will see every saved car as soon as he opens the application as an expandable field. Before clicking on the car it will show only the image of that car and the model and year, after clicking on the car, it will expand and show all the fields with the update button and delete button.
+UPDATE - If the user wants to update a car, first he has to press on that car to expand it. After all the details about that car there will be an update button that he can press on it and it will take him to a different screen to update the car, same as the CREATE function but with the known fields already completed but editable.
+DELETE - If the user wants to delete a car, first he has to press on that car to expand it. After all the details about that car there will be a delete button that he can press on it and it will show a pop up to confirm his decision.
+
+-4- Persistence details, what crud operations are persisted on the local db and on the server.
+The crud operations that will persist on the local db are CREATE, READ and DELETE
+
+-5- Details on what is happening when the device is offline.
+CREATE - If the user creates a car while offline the request will wait for an internet connection and when it gets one, the app will be updated with that specific request.
+READ - Everything that was saved when having an internet connection will show up if the user enters the application offline.
+DELETE - If the user deletes a car while offline the request will wait for an internet connection and when it gets one, the app will be updated with that specific request.
