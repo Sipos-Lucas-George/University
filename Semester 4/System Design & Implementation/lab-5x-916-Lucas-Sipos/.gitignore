@@ -1,0 +1,16 @@
+/.env
+/.idea
+/.idea/*
+/file/buyers/
+/file/buyers/*
+/file/cars/
+/file/cars/*
+/file/delivery_service/
+/file/delivery_service/*
+/venv/
+/venv/*
+
+/file/company/
+/file/company/*
+/node_modules/
+/node_modules/*
