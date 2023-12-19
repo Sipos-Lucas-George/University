@@ -1,0 +1,3 @@
+/home/lucas/ubumbu/university/University/Semester 5/Parallel and Distributed Programming/Lab_6/cmake-build-debug/CMakeFiles/Lab_6.dir
+/home/lucas/ubumbu/university/University/Semester 5/Parallel and Distributed Programming/Lab_6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lucas/ubumbu/university/University/Semester 5/Parallel and Distributed Programming/Lab_6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
